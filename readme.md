@@ -7,6 +7,7 @@ This repository contains some of my config files:
 - `.slate.js` - keyboard shortcuts for slate.
 - `.hyper.js` - configuration for Hyper Term.
 - `.osx` - macOS configuration based on the dotfiles of Mathias Bynens.
+- `profiles.json` - configuration for Windows Terminal
 
 Others are mostly self descriptive.
 
