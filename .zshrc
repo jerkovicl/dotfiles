@@ -206,7 +206,6 @@ alias jh="jhipster"
 alias cl="clear"
 alias open="google-chrome"
 alias fopen="xdg-open"
-alias clip="f() { cat $1 | clip.exe };f"
 
 function dipa(){
   docker rm -v $(docker ps -a -q -f status=exited);
