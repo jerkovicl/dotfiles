@@ -229,7 +229,7 @@
         "requestedTheme" : "system",
         "showTabsInTitlebar" : true,
         "showTerminalTitleInTitlebar" : true,
-		"copyOnSelect": true,
+		    "copyOnSelect": true,
         "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
     },
     "profiles" : 
@@ -340,7 +340,7 @@
         },
         {
             "acrylicOpacity" : 0.5,
-            "backgroundImage" : "C:/users/lukaj/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/RoamingState/OS_Ubuntu.png",
+            "backgroundImage" : "ms-appdata:///roaming/OS_Ubuntu.png",
             "backgroundImageOpacity" : 0.30000001192092896,
             "backgroundImageStretchMode" : "none",
             "closeOnExit" : true,
