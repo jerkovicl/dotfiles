@@ -253,6 +253,8 @@
             "snapOnInput" : true,
             "startingDirectory" : "~",
             "tabTitle" : "PowerShell",
+			"suppressApplicationTitle": true,
+
             "useAcrylic" : true
         },
         {
@@ -277,17 +279,18 @@
             "snapOnInput" : true,
             "startingDirectory" : "%USERPROFILE%",
             "tabTitle" : "Cmd (Clink)",
+			"suppressApplicationTitle": true,
             "useAcrylic" : false
         },
         {
             "acrylicOpacity" : 0.80000001192092896,
             "background" : "#171717",
             "closeOnExit" : true,
-            "colorScheme" : "Nord",
+            "colorScheme" : "Night Owl",
             "commandline" : "cmd.exe",
-            "cursorColor" : "#FFFFFF",
-            "cursorShape" : "bar",
-            "fontFace" : "FantasqueSansMono NF",
+            "cursorColor" : "#80A4C2",
+            "cursorShape" : "filledBox",
+            "fontFace" : "Delugia Nerd Font",
             "fontSize" : 13,
             "guid" : "{0caa0dad-35be-5f56-a8ff-afceeeaa6123}",
             "historySize" : 9001,
@@ -297,17 +300,18 @@
             "snapOnInput" : true,
             "startingDirectory" : "~",
             "tabTitle" : "Cmd (Clink)",
+			"suppressApplicationTitle": true,
             "useAcrylic" : true
         },
         {
-            "acrylicOpacity" : 0.5,
+            "acrylicOpacity" : 0.80000001192092896,
             "backgroundImage" : "ms-appdata:///roaming/ps-core.png",
             "backgroundImageOpacity" : 0.30000001192092896,
             "backgroundImageStretchMode" : "none",
             "closeOnExit" : true,
-            "colorScheme" : "Campbell",
+            "colorScheme" : "Night Owl",
             "commandline" : "C:\\Program Files\\PowerShell\\7-preview\\pwsh.exe",
-            "cursorColor" : "#FFFFFF",
+            "cursorColor" : "#80A4C2",
             "cursorShape" : "bar",
             "fontFace" : "UbuntuMono NF",
             "fontSize" : 14,
@@ -318,6 +322,7 @@
             "padding" : "0, 0, 0, 0",
             "snapOnInput" : true,
             "tabTitle" : "PowerShell Core",
+			"suppressApplicationTitle": true,
             "useAcrylic" : false
         },
         {
@@ -359,6 +364,7 @@
             "snapOnInput" : true,
             "startingDirectory" : "~",
             "tabTitle" : "Ubuntu WSL1",
+			"suppressApplicationTitle": true,
             "useAcrylic" : false
         }
     ],
@@ -594,6 +600,48 @@
             "red" : "#BF616A",
             "white" : "#ECEFF4",
             "yellow" : "#EBCB8B"
+        },
+		{
+            "background": "#011627",
+            "black": "#011627",
+            "blue": "#82AAFF",
+            "brightBlack": "#575656",
+            "brightBlue": "#82AAFF",
+            "brightCyan": "#7FDBCA",
+            "brightGreen": "#22DA6E",
+            "brightPurple": "#C792EA",
+            "brightRed": "#EF5350",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFEB95",
+            "cyan": "#21C7A8",
+            "foreground": "#D6DEEB",
+            "green": "#22DA6E",
+            "name": "Night Owl",
+            "purple": "#C792EA",
+            "red": "#EF5350",
+            "white": "#FFFFFF",
+            "yellow": "#ADDB67"
+        },
+        {
+            "background": "#FBFBFB",
+            "black": "#403F53",
+            "blue": "#288ED7",
+            "brightBlack": "#403F53",
+            "brightBlue": "#288ED7",
+            "brightCyan": "#2AA298",
+            "brightGreen": "#08916A",
+            "brightPurple": "#D6438A",
+            "brightRed": "#DE3D3B",
+            "brightWhite": "#979797",
+            "brightYellow": "#DAAA01",
+            "cyan": "#2AA298",
+            "foreground": "#403F53",
+            "green": "#08916A",
+            "name": "Light Owl",
+            "purple": "#D6438A",
+            "red": "#DE3D3B",
+            "white": "#F0F0F0",
+            "yellow": "#E0AF02"
         }
     ]
 }
