@@ -3,13 +3,15 @@
     "globals" : 
     {
         "alwaysShowTabs" : true,
+		    "confirmCloseAllTabs" : true,
         "defaultProfile" : "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
         "initialCols" : 120,
         "initialRows" : 30,
+		    "requestedTheme": "dark",
         "keybindings" : 
         [
             {
-                "command" : "closePane",
+                "command" : "closeTab",
                 "keys" : 
                 [
                     "ctrl+w"
@@ -36,14 +38,6 @@
                     "ctrl+t"
                 ]
             },
-			{
-                "command" : "openNewTabDropdown",
-                "keys" : 
-                [
-                    "ctrl+shift+space"
-                ]
-            },
-			
             {
                 "command" : "newTabProfile0",
                 "keys" : 
@@ -167,162 +161,114 @@
                 "command" : "switchToTab0",
                 "keys" : 
                 [
-                    "ctrl+alt+1"
+                    "ctrl+1"
                 ]
             },
             {
                 "command" : "switchToTab1",
                 "keys" : 
                 [
-                    "ctrl+alt+2"
+                    "ctrl+2"
                 ]
             },
             {
                 "command" : "switchToTab2",
                 "keys" : 
                 [
-                    "ctrl+alt+3"
+                    "ctrl+3"
                 ]
             },
             {
                 "command" : "switchToTab3",
                 "keys" : 
                 [
-                    "ctrl+alt+4"
+                    "ctrl+4"
                 ]
             },
             {
                 "command" : "switchToTab4",
                 "keys" : 
                 [
-                    "ctrl+alt+5"
+                    "ctrl+5"
                 ]
             },
             {
                 "command" : "switchToTab5",
                 "keys" : 
                 [
-                    "ctrl+alt+6"
+                    "ctrl+6"
                 ]
             },
             {
                 "command" : "switchToTab6",
                 "keys" : 
                 [
-                    "ctrl+alt+7"
+                    "ctrl+7"
                 ]
             },
             {
                 "command" : "switchToTab7",
                 "keys" : 
                 [
-                    "ctrl+alt+8"
+                    "ctrl+8"
                 ]
             },
             {
                 "command" : "switchToTab8",
                 "keys" : 
                 [
-                    "ctrl+alt+9"
+                    "ctrl+9"
                 ]
             }
         ],
-        "requestedTheme" : "system",
         "showTabsInTitlebar" : true,
         "showTerminalTitleInTitlebar" : true,
-		"copyOnSelect": true,
-        "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
+        "copyOnSelect": true,
+		    "wordDelimiters":  " ./\\()\"\u0027-:,.;\u003c\u003e~!@#$%^\u0026*|+=[]{}~?�"
+        // "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
     },
     "profiles" : 
     [
         {
-            "acrylicOpacity" : 0.80000001192092896,
-            "background" : "#171717",
+            "acrylicOpacity" : 0.5,
+            "background" : "#012456",
             "closeOnExit" : true,
-            "colorScheme" : "Nord",
+            "colorScheme" : "Solarized Dark",
             "commandline" : "powershell.exe",
             "cursorColor" : "#FFFFFF",
             "cursorShape" : "bar",
-            "fontFace" : "FantasqueSansMono NF",
-            "fontSize" : 13,
+            "fontFace" : "Delugia Nerd Font",
+            "fontSize" : 10,
             "guid" : "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
             "historySize" : 9001,
             "icon" : "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
-            "name" : "PowerShell",
+            "name" : "Windows PowerShell",
             "padding" : "0, 0, 0, 0",
             "snapOnInput" : true,
-            "startingDirectory" : "~",
-            "tabTitle" : "PowerShell",
-			"suppressApplicationTitle": true,
-
-            "useAcrylic" : true
+            "startingDirectory" : "%USERPROFILE%",
+            "useAcrylic" : false
         },
         {
             "acrylicOpacity" : 0.85000002384185791,
             "background" : "#012456",
-            "backgroundImage" : "ms-appdata:///roaming/background_gif.gif",
+            "backgroundImage" : "C:/Users/A687301/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/RoamingState/background_gif.gif",
             "backgroundImageOpacity" : 0.69999998807907104,
             "backgroundImageStretchMode" : "uniformToFill",
             "closeOnExit" : false,
-            "colorScheme" : "Campbell",
+            "colorScheme" : "Night Owl Dark",
             "commandline" : "cmd.exe",
             "cursorColor" : "#00FF00",
             "cursorHeight" : 25,
-            "cursorShape" : "vintage",
-            "fontFace" : "FuraCode NF",
+            "cursorShape": "vintage",
+            "fontFace":  "Recursive Mono Csl b030st",
             "fontSize" : 12,
             "guid" : "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
             "historySize" : 9001,
-            "icon" : "ms-appdata:///roaming/cmd.ico",
-            "name" : "Cmd (ClinkStarWars)",
+            "icon" : "ms-appx:///ProfileIcons/{0caa0dad-35be-5f56-a8ff-afceeeaa6101}.png",
+            "name" : "Star Wars",
             "padding" : "0, 0, 0, 0",
             "snapOnInput" : true,
             "startingDirectory" : "%USERPROFILE%",
-            "tabTitle" : "Cmd (Clink)",
-			"suppressApplicationTitle": true,
-            "useAcrylic" : false
-        },
-        {
-            "acrylicOpacity" : 0.80000001192092896,
-            "background" : "#171717",
-            "closeOnExit" : true,
-            "colorScheme" : "Night Owl",
-            "commandline" : "cmd.exe",
-            "cursorColor" : "#80A4C2",
-            "cursorShape" : "filledBox",
-            "fontFace" : "Delugia Nerd Font",
-            "fontSize" : 13,
-            "guid" : "{0caa0dad-35be-5f56-a8ff-afceeeaa6123}",
-            "historySize" : 9001,
-            "icon" : "ms-appdata:///roaming/cmd.ico",
-            "name" : "Cmd (Clink)",
-            "padding" : "0, 0, 0, 0",
-            "snapOnInput" : true,
-            "startingDirectory" : "~",
-            "tabTitle" : "Cmd (Clink)",
-			"suppressApplicationTitle": true,
-            "useAcrylic" : true
-        },
-        {
-            "acrylicOpacity" : 0.80000001192092896,
-            "backgroundImage" : "ms-appdata:///roaming/ps-core.png",
-            "backgroundImageOpacity" : 0.30000001192092896,
-            "backgroundImageStretchMode" : "none",
-            "closeOnExit" : true,
-            "colorScheme" : "Night Owl",
-            "commandline" : "C:\\Program Files\\PowerShell\\7-preview\\pwsh.exe",
-            "cursorColor" : "#80A4C2",
-            "cursorShape" : "bar",
-            "fontFace" : "UbuntuMono NF",
-            "fontSize" : 14,
-            "guid" : "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-            "historySize" : 9001,
-            "icon" : "ms-appx:///ProfileIcons/{574e775e-4f2a-5b96-ac1e-a2962a402336}.png",
-            "name" : "PowerShell Core",
-            "padding" : "0, 0, 0, 0",
-            "snapOnInput" : true,
-            "tabTitle" : "PowerShell Core",
-			"suppressApplicationTitle": true,
             "useAcrylic" : false
         },
         {
@@ -345,27 +291,49 @@
             "useAcrylic" : true
         },
         {
-            "acrylicOpacity" : 0.5,
-            "backgroundImage" : "C:/users/lukaj/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/RoamingState/OS_Ubuntu.png",
-            "backgroundImageOpacity" : 0.30000001192092896,
-            "backgroundImageStretchMode" : "none",
+            "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+            "hidden": false,
+            "name": "PowerShell Core",
+			"fontFace":  "CascadiaCode Nerd Font",
+            "source": "Windows.Terminal.PowershellCore",
+			"acrylicOpacity":  0.85000002384185791,
+            "closeOnExit": true,
+            "colorScheme": "Night Owl Dark",
+            "cursorColor": "#80A4C2",
+            "cursorShape": "bar",
+            "fontSize": 12,
+            "historySize": 9001,
+            "padding": "10, 5, 10, 5",
+            "snapOnInput": true,
+            "startingDirectory": "C:/Git/Siemens_OSEC_Git",
+            "useAcrylic": true
+        },
+        {
+            "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+			"acrylicOpacity" : 0.5,
             "closeOnExit" : true,
-            "colorScheme" : "Solarized Dark",
-            "commandline" : "wsl.exe",
-            "cursorColor" : "#FFFFFF",
+            "colorScheme" : "Night Owl Dark",
+            "commandline" : "wsl.exe -d Ubuntu-18.04",
+            "cursorColor" : "#80A4C2",
             "cursorShape" : "bar",
-            "fontFace" : "MesloLGS NF",
-            "fontSize" : 14,
-            "guid" : "{2c4de342-38b7-51cf-b940-2309a097f518}",
-            "historySize" : 9001,
+            "fontFace" : "Delugia Nerd Font",
+            "fontSize" : 12,
+            "hidden": false,
+			"suppressApplicationTitle": true,
+            "name": "Ubuntu",
+            "source": "Windows.Terminal.Wsl",
+			"historySize" : 9001,
             "icon" : "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-            "name" : "Ubuntu WSL1",
             "padding" : "0, 0, 0, 0",
             "snapOnInput" : true,
-            "startingDirectory" : "~",
-            "tabTitle" : "Ubuntu WSL1",
-			"suppressApplicationTitle": true,
+            "startingDirectory" : "%USERPROFILE%",
             "useAcrylic" : false
+        },
+        {
+            "guid": "{63e31163-583f-5850-9c1e-24e227dd2da9}",
+            "hidden": false,
+            "name": "PowerShell (dotnet global)",
+            "source": "Windows.Terminal.PowershellCore"
         }
     ],
     "schemes" : 
@@ -434,7 +402,7 @@
             "yellow" : "#C18301"
         },
         {
-            "background" : "#002B36",
+            "background" : "#073642",
             "black" : "#073642",
             "blue" : "#268BD2",
             "brightBlack" : "#002B36",
@@ -446,11 +414,11 @@
             "brightWhite" : "#FDF6E3",
             "brightYellow" : "#657B83",
             "cyan" : "#2AA198",
-            "foreground" : "#839496",
+            "foreground" : "#FDF6E3",
             "green" : "#859900",
             "name" : "Solarized Dark",
             "purple" : "#D33682",
-            "red" : "#DC322F",
+            "red" : "#D30102",
             "white" : "#EEE8D5",
             "yellow" : "#B58900"
         },
@@ -467,139 +435,13 @@
             "brightWhite" : "#FDF6E3",
             "brightYellow" : "#657B83",
             "cyan" : "#2AA198",
-            "foreground" : "#657B83",
+            "foreground" : "#073642",
             "green" : "#859900",
             "name" : "Solarized Light",
             "purple" : "#D33682",
-            "red" : "#DC322F",
+            "red" : "#D30102",
             "white" : "#EEE8D5",
             "yellow" : "#B58900"
-        },
-        {
-            "background" : "#3B4356",
-            "black" : "#161920",
-            "blue" : "#AF4B57",
-            "brightBlack" : "#3B4356",
-            "brightBlue" : "#AF4B57",
-            "brightCyan" : "#E5C078",
-            "brightGreen" : "#92B279",
-            "brightPurple" : "#A3799D",
-            "brightRed" : "#6E8FB3",
-            "brightWhite" : "#E7EAF1",
-            "brightYellow" : "#7DAEAC",
-            "cyan" : "#E5C078",
-            "foreground" : "#E7EAF1",
-            "green" : "#92B279",
-            "name" : "Nord Extra Dark",
-            "purple" : "#A3799D",
-            "red" : "#4E8FB3",
-            "white" : "#DEE3EC",
-            "yellow" : "#76B3C5"
-        },
-        {
-            "background" : "#353A44",
-            "black" : "#151515",
-            "blue" : "#6A8799",
-            "brightBlack" : "#636363",
-            "brightBlue" : "#7EAAC7",
-            "brightCyan" : "#ACBBD0",
-            "brightGreen" : "#A0AC77",
-            "brightPurple" : "#B48EAD",
-            "brightRed" : "#BC5653",
-            "brightWhite" : "#F7F7F7",
-            "brightYellow" : "#EBC17A",
-            "cyan" : "#C9DFFF",
-            "foreground" : "#D9D9D9",
-            "green" : "#909D63",
-            "name" : "Relaxed",
-            "purple" : "#B06698",
-            "red" : "#BC5653",
-            "white" : "#D9D9D9",
-            "yellow" : "#EBC17A"
-        },
-        {
-            "background" : "#2C001E",
-            "black" : "#EEEEEC",
-            "blue" : "#268BD2",
-            "brightBlack" : "#002B36",
-            "brightBlue" : "#839496",
-            "brightCyan" : "#93A1A1",
-            "brightGreen" : "#586E75",
-            "brightPurple" : "#6C71C4",
-            "brightRed" : "#CB4B16",
-            "brightWhite" : "#FDF6E3",
-            "brightYellow" : "#657B83",
-            "cyan" : "#2AA198",
-            "foreground" : "#EEEEEC",
-            "green" : "#729FCF",
-            "name" : "Ubuntu",
-            "purple" : "#D33682",
-            "red" : "#16C60C",
-            "white" : "#EEE8D5",
-            "yellow" : "#B58900"
-        },
-        {
-            "background" : "#2C001E",
-            "black" : "#4E9A06",
-            "blue" : "#3465A4",
-            "brightBlack" : "#555753",
-            "brightBlue" : "#729FCF",
-            "brightCyan" : "#34E2E2",
-            "brightGreen" : "#8AE234",
-            "brightPurple" : "#AD7FA8",
-            "brightRed" : "#EF2929",
-            "brightWhite" : "#EEEEEE",
-            "brightYellow" : "#FCE94F",
-            "cyan" : "#06989A",
-            "foreground" : "#EEEEEE",
-            "green" : "#300A24",
-            "name" : "UbuntuLegit",
-            "purple" : "#75507B",
-            "red" : "#CC0000",
-            "white" : "#D3D7CF",
-            "yellow" : "#C4A000"
-        },
-        {
-            "background" : "#282A36",
-            "black" : "#21222C",
-            "blue" : "#F1FA8C",
-            "brightBlack" : "#6272A4",
-            "brightBlue" : "#D6ACFF",
-            "brightCyan" : "#A4FFFF",
-            "brightGreen" : "#69FF94",
-            "brightPurple" : "#FF92DF",
-            "brightRed" : "#FF6E6E",
-            "brightWhite" : "#FFFFFF",
-            "brightYellow" : "#FFFFA5",
-            "cyan" : "#8BE9FD",
-            "foreground" : "#F8F8F2",
-            "green" : "#50FA7B",
-            "name" : "Dracula",
-            "purple" : "#BD93F9",
-            "red" : "#FF5555",
-            "white" : "#F8F8F2",
-            "yellow" : "#F1FA8C"
-        },
-        {
-            "background" : "#2E3440",
-            "black" : "#2E3440",
-            "blue" : "#5E81AC",
-            "brightBlack" : "#2E3440",
-            "brightBlue" : "#5E81AC",
-            "brightCyan" : "#8FBCBB",
-            "brightGreen" : "#A3BE8C",
-            "brightPurple" : "#B48EAD",
-            "brightRed" : "#BF616A",
-            "brightWhite" : "#ECEFF4",
-            "brightYellow" : "#EBCB8B",
-            "cyan" : "#8FBCBB",
-            "foreground" : "#ECEFF4",
-            "green" : "#A3BE8C",
-            "name" : "Nord",
-            "purple" : "#B48EAD",
-            "red" : "#BF616A",
-            "white" : "#ECEFF4",
-            "yellow" : "#EBCB8B"
         },
 		{
             "background": "#011627",
@@ -616,32 +458,32 @@
             "cyan": "#21C7A8",
             "foreground": "#D6DEEB",
             "green": "#22DA6E",
-            "name": "Night Owl",
+            "name": "Night Owl Dark",
             "purple": "#C792EA",
             "red": "#EF5350",
             "white": "#FFFFFF",
             "yellow": "#ADDB67"
         },
-        {
-            "background": "#FBFBFB",
-            "black": "#403F53",
-            "blue": "#288ED7",
-            "brightBlack": "#403F53",
-            "brightBlue": "#288ED7",
-            "brightCyan": "#2AA298",
-            "brightGreen": "#08916A",
-            "brightPurple": "#D6438A",
-            "brightRed": "#DE3D3B",
-            "brightWhite": "#979797",
-            "brightYellow": "#DAAA01",
-            "cyan": "#2AA298",
-            "foreground": "#403F53",
-            "green": "#08916A",
-            "name": "Light Owl",
-            "purple": "#D6438A",
-            "red": "#DE3D3B",
-            "white": "#F0F0F0",
-            "yellow": "#E0AF02"
-        }
+		{
+            "name" : "Monokai Night",
+            "background" : "#1f1f1f",
+            "foreground" : "#f8f8f8",
+            "black" : "#1f1f1f",
+            "blue" : "#6699df",
+            "cyan" : "#e69f66",
+            "green" : "#a6e22e",
+            "purple" : "#ae81ff",
+            "red" : "#f92672",
+            "white" : "#f8f8f2",
+            "yellow" : "#e6db74",
+            "brightBlack" : "#75715e",
+            "brightBlue" : "#66d9ef",
+            "brightCyan" : "#e69f66",
+            "brightGreen" : "#a6e22e",
+            "brightPurple" : "#ae81ff",
+            "brightRed" : "#f92672",
+            "brightWhite" : "#f8f8f2",
+            "brightYellow" : "#e6db74"
+      }
     ]
 }
