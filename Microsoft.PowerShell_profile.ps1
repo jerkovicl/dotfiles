@@ -9,6 +9,7 @@ Set-TerminalIconsColorTheme -Name DevBlackOps
 #$global:PSColor.File.Executable.Color = 'Blue'
 #$ThemeSettings.GitSymbols.BranchSymbol = [char]::ConvertFromUtf32(0xE0A0)
 $DefaultUser = 'A687301'
+$Env:NODE_OPTIONS = "max-old-space-size=8192"
 
 function Dotnet-Rebuild {
      dotnet watch run  
