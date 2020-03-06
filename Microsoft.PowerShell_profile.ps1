@@ -11,22 +11,27 @@ Set-TerminalIconsColorTheme -Name DevBlackOps
 $DefaultUser = 'A687301'
 $Env:NODE_OPTIONS = "max-old-space-size=8192"
 
-function Update-Modules {
-     Get-InstalledModule | Update-Module # -Force 
+function Check-Modules {
+   Get-InstalledModule | foreach { $b = (find-module $_.name).version ; if ($b -ne $_.version) { Write-host "$($_.name) has an update from $($_.version) to $b" } } 
 }
+
+function Update-Modules {
+   Get-InstalledModule | Update-Module # -Force 
+}
+
 function Dotnet-Rebuild {
-     dotnet watch run  
+   dotnet watch run  
 }
 
 function Git-Commit {
-    param (
-        [string] $message
-    )
-    git add -A ; git commit -m $message
+   param (
+       [string] $message
+   )
+   git add -A ; git commit -m $message
 }
 
 function Git-Status {
-    git status
+   git status
 }
 
 function Dir-Icons {
@@ -39,3 +44,4 @@ Set-Alias -Name np -Value notepad++
 Set-Alias gs Git-Status
 Set-Alias lsi Dir-Icons
 Set-Alias pum Update-Modules
+Set-Alias pcm Check-Modules
