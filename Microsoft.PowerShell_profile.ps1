@@ -11,6 +11,9 @@ Set-TerminalIconsColorTheme -Name DevBlackOps
 $DefaultUser = 'A687301'
 $Env:NODE_OPTIONS = "max-old-space-size=8192"
 
+function Update-Modules {
+     Get-InstalledModule | Update-Module # -Force 
+}
 function Dotnet-Rebuild {
      dotnet watch run  
 }
@@ -35,3 +38,4 @@ Set-Alias gac Git-Commit
 Set-Alias -Name np -Value notepad++
 Set-Alias gs Git-Status
 Set-Alias lsi Dir-Icons
+Set-Alias pum Update-Modules
