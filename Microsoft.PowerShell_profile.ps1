@@ -47,6 +47,3 @@ Set-Alias gs Git-Status
 Set-Alias lsi Dir-Icons
 Set-Alias pum Update-Modules
 Set-Alias pcm Check-Modules
-×
-Drag and Drop
-The image will be downloaded
