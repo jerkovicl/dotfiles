@@ -1,0 +1,13 @@
+.git
+.teamcity
+.vs
+.vscode
+packages
+.env
+.git
+.gitignore
+.vs
+.vscode
+*/bin
+*/obj
+**/.toolstarget
