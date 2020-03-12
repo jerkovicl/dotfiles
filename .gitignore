@@ -62,6 +62,10 @@ artifacts/
 # Chutzpah Test files
 _Chutzpah*
 
+# e2e Test
+/e2e/*.js
+/e2e/*.map
+
 # Visual C++ cache files
 ipch/
 *.aps
