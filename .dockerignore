@@ -1,13 +1,39 @@
+# repositories
 .git
+.hg
+.svn
+.gitignore
+
+# editor configs
+Properties
+.vscode
+.editorconfig
+.prettierrc
+.stylelintrc.json
 .teamcity
 .vs
-.vscode
 packages
 .env
-.git
-.gitignore
-.vs
-.vscode
-*/bin
-*/obj
+
+# code binaries
+bin
+obj
+node_modules
+npm-debug.log
+log
 **/.toolstarget
+
+# .Net project files
+*.csproj
+*.cs
+
+# docs
+*.md
+*.txt
+LICENSE
+
+# docker
+.docker
+.dockerignore
+Dockerfile
+*/docker-compose*
