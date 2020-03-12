@@ -38,8 +38,9 @@
 	# [default] trailing-space: looks for spaces at the end of a line
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of
 	# a line
+	longpaths = true
 	whitespace = space-before-tab,indent-with-non-tab,trailing-space
-	editor = /Applications/MacVim.app/Contents/MacOS/Vim
+	editor = code --wait
 
 [color]
 	# Use colors in Git commands that are capable of colored output when
@@ -79,6 +80,20 @@
 [push]
 	default = matching
 [user]
-	name = mgechev
-  email = mgechev@gmail.com
+	name = Luka Jerkovic
+	email = lukajerkovic@protonmail.com
 
+[diff]
+	tool = p4merge
+[difftool "p4merge"]
+	path = "C:\\Users\\Tools\\cmder\\bin\\p4merge.exe"
+	keepBackup = false
+[merge]
+	tool = p4merge
+[mergetool "p4merge"]
+	path = "C:\\Users\\Tools\\cmder\\bin\\p4merge.exe"
+	keepBackup = false
+	prompt = false
+	trustExitCode = true
+[help]
+	autocorrect = 1
