@@ -110,6 +110,11 @@ wsl --set-default-version 2
 
 This will set the version of any new distribution installed to WSL 2.
 
+## Kernel update
+
+wsl.exe --update command is available on Windows Insider Preview **Build 20150 or later**.
+For the older version manual update is needed.
+
 ## Troubleshooting installation
 
 Below are related errors and suggested fixes. Refer to the [WSL troubleshooting page](troubleshooting.md) for other common errors and their solutions.
