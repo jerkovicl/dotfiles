@@ -8,9 +8,10 @@
   "theme": "dark",
   "showTabsInTitlebar": true,
   "showTerminalTitleInTitlebar": true,
-  "tabWidthMode": "equal",
+  "tabWidthMode": "compact", //equal
   "copyOnSelect": true,
   "copyFormatting": true,
+  "startOnUserLogin": true,
   "wordDelimiters": " ./\\()\"\u0027-:,.;\u003c\u003e~!@#$%^\u0026*|+=[]{}~?�",
   // "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
   "keybindings": [
@@ -267,6 +268,7 @@
         "cursorColor": "#80A4C2",
         "cursorShape": "bar",
         "fontSize": 12,
+        "fontWeight": "normal",
         "historySize": 9001,
         "padding": "10, 5, 10, 5",
         "snapOnInput": true,
