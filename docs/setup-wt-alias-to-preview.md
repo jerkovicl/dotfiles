@@ -7,7 +7,7 @@ If you have multiple apps using the same alias name, you can use these steps to 
 3. Click on Apps & features.  
 4. Click the Manage app execution aliases link.  
 ![Apps & Features](media/apps-features-manage-aliases.jpg)
-5. Turn of the toggle switch for the apps that have the same execution name.
+5. Turn of the toggle switch for the apps that have the same execution name.  
 ![Manage app exceution aliases](media/manage-app-execution-aliases-windows-10.jpg)
 
 Once you've completed the steps, running an alias app name using Command Prompt or Run command will only execute successfully for the app that has the toggle switch enabled.  
