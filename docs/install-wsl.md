@@ -40,6 +40,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 ```
 
 **Restart** your machine to complete the WSL install and update to WSL 2.
+> For easier installation `wsl.exe --install` command is available on Windows Insider Preview **Build 20150 or later** 
 
 ### Set WSL 2 as your default version
 
