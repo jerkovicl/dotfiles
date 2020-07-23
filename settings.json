@@ -1,4 +1,5 @@
 {
+  // docs site: https://docs.microsoft.com/en-us/windows/terminal/
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "alwaysShowTabs": true,
   "confirmCloseAllTabs": true,
@@ -11,9 +12,13 @@
   "tabWidthMode": "compact", //equal
   "copyOnSelect": true,
   "copyFormatting": true,
-  "startOnUserLogin": true,
+  "startOnUserLogin": false,
+  "alwaysOnTop": false,
+  "largePasteWarning": false,
+  "multiLinePasteWarning": false,
   "wordDelimiters": " ./\\()\"\u0027-:,.;\u003c\u003e~!@#$%^\u0026*|+=[]{}~?�",
   // "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
+  //nt, sp, and ft as command line arguments for new tab, split pane, and focus tab,
   "keybindings": [
     {
       "command": "closeTab",
@@ -187,7 +192,11 @@
     {
       "command": "scrollUpPage",
       "keys": ["ctrl+shift+pgup"]
-    }
+    },
+    { "command": "toggleFocusMode", "keys": "shift+f11" },
+    { "command": { "action": "setTabColor", "color": "#3cb371" }, "keys": "ctrl+a" },
+    { "command": "toggleRetroEffect", "keys": "ctrl+d" },
+    { "command": "commandPalette", "keys": "f1" }
   ],
   "profiles": {
     "defaults": {
