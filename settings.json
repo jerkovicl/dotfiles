@@ -8,7 +8,7 @@
   "theme": "dark",
   "showTabsInTitlebar": true,
   "showTerminalTitleInTitlebar": true,
-  "tabWidthMode": "equal",
+  "tabWidthMode": "compact", //equal
   "copyOnSelect": true,
   "copyFormatting": true,
   "startOnUserLogin": false,
@@ -18,6 +18,7 @@
   "useTabSwitcher": true,
   "wordDelimiters": " ./\\()\"\u0027-:,.;\u003c\u003e~!@#$%^\u0026*|+=[]{}~?�",
   // "wordDelimiters": " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
+  //nt, sp, and ft as command line arguments for new tab, split pane, and focus tab,
   // "disabledProfileSources": ["Windows.Terminal.Wsl", "Windows.Terminal.Azure", "Windows.Terminal.PowershellCore"]
   // "altGrAliasing": false
   "keybindings": [
@@ -238,6 +239,8 @@
   "profiles": {
     "defaults": {
       "fontFace": "JetBrainsMono NF",
+      // "fontFace": "CascadiaCode Nerd Font"
+      // "fontFace": "Delugia Nerd Font"
       "colorScheme": "Night Owl Dark"
     },
     "list": [
@@ -306,7 +309,7 @@
         "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
         "hidden": false,
         "name": "PowerShell Core",
-        "fontFace": "Delugia Nerd Font",
+        "fontFace": "CascadiaCode Nerd Font",
         "source": "Windows.Terminal.PowershellCore",
         "acrylicOpacity": 0.85000002384185791,
         "closeOnExit": true,
@@ -314,6 +317,7 @@
         "cursorColor": "#80A4C2",
         "cursorShape": "bar",
         "fontSize": 11,
+        "fontWeight": "normal",
         "historySize": 9001,
         "padding": "10, 5, 10, 5",
         "snapOnInput": true,
