@@ -1,5 +1,4 @@
 {
-  // docs site: https://docs.microsoft.com/en-us/windows/terminal/
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "alwaysShowTabs": true,
   "confirmCloseAllTabs": true,
@@ -9,35 +8,49 @@
   "theme": "dark",
   "showTabsInTitlebar": true,
   "showTerminalTitleInTitlebar": true,
-  "tabWidthMode": "compact", //equal
+  "tabWidthMode": "equal",
   "copyOnSelect": true,
   "copyFormatting": true,
   "startOnUserLogin": false,
   "alwaysOnTop": false,
   "largePasteWarning": false,
   "multiLinePasteWarning": false,
+  "useTabSwitcher": true,
   "wordDelimiters": " ./\\()\"\u0027-:,.;\u003c\u003e~!@#$%^\u0026*|+=[]{}~?�",
-  // "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
-  //nt, sp, and ft as command line arguments for new tab, split pane, and focus tab,
+  // "wordDelimiters": " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
+  // "disabledProfileSources": ["Windows.Terminal.Wsl", "Windows.Terminal.Azure", "Windows.Terminal.PowershellCore"]
+  // "altGrAliasing": false
   "keybindings": [
     {
       "command": "closeTab",
-      "keys": ["ctrl+w"]
+      "keys": "ctrl+w"
     },
-    { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+c" },
-    { "command": "paste", "keys": "ctrl+v" },
+    { "command": "closePane", "keys": "ctrl+shift+w" },
+    {
+      "name": null,
+      "command": { "action": "copy", "singleLine": false },
+      "keys": "ctrl+c"
+    },
+    { "name": null, "command": "paste", "keys": "ctrl+v" },
     { "command": "find", "keys": "ctrl+shift+f" },
     {
       "command": "duplicateTab",
-      "keys": ["ctrl+shift+d"]
+      "keys": "ctrl+shift+d"
     },
     {
-      "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" },
-      "keys": ["ctrl+shift+s"]
+      "icon": "⚡",
+      "name": "Split duplicate",
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      },
+      "keys": "ctrl+shift+s"
     },
+    { "command": "tabSearch", "keys": "ctrl+c" },
     {
       "command": "newTab",
-      "keys": ["ctrl+t"]
+      "keys": "ctrl+t"
     },
     {
       "command": {
@@ -68,6 +81,7 @@
       "keys": "ctrl+shift+4"
     },
     {
+      "name": null,
       "command": {
         "action": "newTab",
         "index": 4
@@ -75,6 +89,7 @@
       "keys": "ctrl+shift+5"
     },
     {
+      "name": null,
       "command": {
         "action": "newTab",
         "index": 5
@@ -82,6 +97,7 @@
       "keys": "ctrl+shift+6"
     },
     {
+      "name": null,
       "command": {
         "action": "newTab",
         "index": 6
@@ -89,6 +105,7 @@
       "keys": "ctrl+shift+7"
     },
     {
+      "name": null,
       "command": {
         "action": "newTab",
         "index": 7
@@ -96,6 +113,7 @@
       "keys": "ctrl+shift+8"
     },
     {
+      "name": null,
       "command": {
         "action": "newTab",
         "index": 8
@@ -104,11 +122,11 @@
     },
     {
       "command": "nextTab",
-      "keys": ["ctrl+tab"]
+      "keys": "ctrl+tab"
     },
     {
       "command": "prevTab",
-      "keys": ["ctrl+shift+tab"]
+      "keys": "ctrl+shift+tab"
     },
     {
       "command": {
@@ -146,6 +164,7 @@
       "keys": "ctrl+5"
     },
     {
+      "name": null,
       "command": {
         "action": "switchToTab",
         "index": 5
@@ -153,6 +172,7 @@
       "keys": "ctrl+6"
     },
     {
+      "name": null,
       "command": {
         "action": "switchToTab",
         "index": 6
@@ -160,6 +180,7 @@
       "keys": "ctrl+7"
     },
     {
+      "name": null,
       "command": {
         "action": "switchToTab",
         "index": 7
@@ -167,6 +188,7 @@
       "keys": "ctrl+8"
     },
     {
+      "name": null,
       "command": {
         "action": "switchToTab",
         "index": 8
@@ -175,32 +197,47 @@
     },
     {
       "command": "openSettings",
-      "keys": ["ctrl+,"]
+      "keys": "ctrl+,"
     },
     {
+      "name": null,
       "command": "scrollDown",
-      "keys": ["ctrl+shift+down"]
+      "keys": "ctrl+shift+down"
     },
     {
+      "name": null,
       "command": "scrollDownPage",
-      "keys": ["ctrl+shift+pgdn"]
+      "keys": "ctrl+shift+pgdn"
     },
     {
+      "name": null,
       "command": "scrollUp",
-      "keys": ["ctrl+shift+up"]
+      "keys": "ctrl+shift+up"
     },
     {
+      "name": null,
       "command": "scrollUpPage",
-      "keys": ["ctrl+shift+pgup"]
+      "keys": "ctrl+shift+pgup"
     },
     { "command": "toggleFocusMode", "keys": "shift+f11" },
-    { "command": { "action": "setTabColor", "color": "#3cb371" }, "keys": "ctrl+a" },
+    {
+      "command": { "action": "setTabColor", "color": "#3cb371" },
+      "keys": "ctrl+a"
+    },
     { "command": "toggleRetroEffect", "keys": "ctrl+d" },
-    { "command": "commandPalette", "keys": "f1" }
+    { "command": "commandPalette", "keys": "f1" },
+    // This command opens a new tab with PowerShell in a pane, a vertical pane running  the Command Prompt profile in the C:\ directory, and a horizontal pane running the Ubuntu profile.
+    {
+      "command": {
+        "action": "wt",
+        "commandline": "new-tab pwsh.exe ; split-pane -p \"Command Prompt\" -d C:\\ ; split-pane -p \"Ubuntu\" -H"
+      },
+      "keys": "ctrl+a"
+    }
   ],
   "profiles": {
     "defaults": {
-      "fontFace": "CascadiaCode Nerd Font",
+      "fontFace": "JetBrainsMono NF",
       "colorScheme": "Night Owl Dark"
     },
     "list": [
@@ -254,7 +291,7 @@
         "connectionType": "{d9fcfdfa-a479-412c-83b7-c5640e61cd62}",
         "cursorColor": "#FFFFFF",
         "cursorShape": "bar",
-        "fontFace": "Consolas",
+        "fontFace": "Cascadia Code PL",
         "fontSize": 10,
         "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
         "historySize": 9001,
@@ -269,47 +306,64 @@
         "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
         "hidden": false,
         "name": "PowerShell Core",
-        "fontFace": "CascadiaCode Nerd Font",
+        "fontFace": "Delugia Nerd Font",
         "source": "Windows.Terminal.PowershellCore",
         "acrylicOpacity": 0.85000002384185791,
         "closeOnExit": true,
         "colorScheme": "Night Owl Dark",
         "cursorColor": "#80A4C2",
         "cursorShape": "bar",
-        "fontSize": 12,
-        "fontWeight": "normal",
+        "fontSize": 11,
         "historySize": 9001,
         "padding": "10, 5, 10, 5",
         "snapOnInput": true,
+        "suppressApplicationTitle": true,
+        "tabTitle": "PS Core",
+        "tabColor": "#21cf78",
         "startingDirectory": "C:/Git/Siemens_OSEC_Git",
         "useAcrylic": true
-      },
-      {
-        "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
-        "acrylicOpacity": 0.5,
-        "closeOnExit": true,
-        "colorScheme": "Night Owl Dark",
-        "commandline": "wsl.exe -d Ubuntu-18.04",
-        "cursorColor": "#80A4C2",
-        "cursorShape": "bar",
-        "fontFace": "Delugia Nerd Font",
-        "fontSize": 12,
-        "hidden": false,
-        "suppressApplicationTitle": true,
-        "name": "Ubuntu",
-        "source": "Windows.Terminal.Wsl",
-        "historySize": 9001,
-        "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-        "padding": "0, 0, 0, 0",
-        "snapOnInput": true,
-        "startingDirectory": "%USERPROFILE%",
-        "useAcrylic": false
       },
       {
         "guid": "{63e31163-583f-5850-9c1e-24e227dd2da9}",
         "hidden": true,
         "name": "PowerShell (dotnet global)",
         "source": "Windows.Terminal.PowershellCore"
+      },
+      {
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "acrylicOpacity": 0.85000002384185791,
+        "closeOnExit": true,
+        "colorScheme": "Night Owl Dark",
+        "commandline": "wsl.exe -d Ubuntu",
+        "cursorColor": "#80A4C2",
+        "cursorShape": "bar",
+        "fontFace": "Delugia Nerd Font",
+        "fontSize": 11,
+        "hidden": false,
+        "suppressApplicationTitle": true,
+        "name": "Ubuntu",
+        "source": "Windows.Terminal.Wsl",
+        "historySize": 9001,
+        "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+        "padding": "10, 5, 10, 5",
+        "snapOnInput": true,
+        "startingDirectory": "%USERPROFILE%",
+        "useAcrylic": true
+      },
+      {
+        "name": "Command Prompt",
+        "icon": "ms-appx:///ProfileIcons/{0caa0dad-35be-5f56-a8ff-afceeeaa6101}.png",
+        "commandline": "cmd.exe",
+        "closeOnExit": true,
+        "colorScheme": "Retro",
+        "cursorColor": "#FFFFFF",
+        "cursorShape": "filledBox",
+        "fontSize": 16,
+        "padding": "5, 5, 5, 5",
+        "tabTitle": "Retro",
+        "fontFace": "Cascadia Code PL",
+        // "fontFace": "PxPlus IBM VGA8",
+        "experimental.retroTerminalEffect": true
       }
     ]
   },
@@ -504,6 +558,70 @@
       "brightPurple": "#AD7FA8",
       "brightCyan": "#34E2E2",
       "brightWhite": "#EEEEEC"
+    },
+    {
+      "name": "Raspberry",
+      "background": "#3C0315",
+      "black": "#282A2E",
+      "blue": "#0170C5",
+      "brightBlack": "#676E7A",
+      "brightBlue": "#80c8ff",
+      "brightCyan": "#8ABEB7",
+      "brightGreen": "#B5D680",
+      "brightPurple": "#AC79BB",
+      "brightRed": "#BD6D85",
+      "brightWhite": "#FFFFFD",
+      "brightYellow": "#FFFD76",
+      "cyan": "#3F8D83",
+      "foreground": "#FFFFFD",
+      "green": "#76AB23",
+      "purple": "#7D498F",
+      "red": "#BD0940",
+      "white": "#FFFFFD",
+      "yellow": "#E0DE48"
+    },
+    {
+      "name": "Frost",
+      "background": "#FFFFFF",
+      "black": "#3C5712",
+      "blue": "#17b2ff",
+      "brightBlack": "#749B36",
+      "brightBlue": "#27B2F6",
+      "brightCyan": "#13A8C0",
+      "brightGreen": "#89AF50",
+      "brightPurple": "#F2A20A",
+      "brightRed": "#F49B36",
+      "brightWhite": "#741274",
+      "brightYellow": "#991070",
+      "cyan": "#3C96A6",
+      "foreground": "#000000",
+      "green": "#6AAE08",
+      "purple": "#991070",
+      "red": "#8D0C0C",
+      "white": "#6E386E",
+      "yellow": "#991070"
+    },
+    {
+      "name": "Retro",
+      "background": "#000000",
+      "black": "#00ff00",
+      "blue": "#00ff00",
+      "brightBlack": "#00ff00",
+      "brightBlue": "#00ff00",
+      "brightCyan": "#00ff00",
+      "brightGreen": "#00ff00",
+      "brightPurple": "#00ff00",
+      "brightRed": "#00ff00",
+      "brightWhite": "#00ff00",
+      "brightYellow": "#00ff00",
+      "cyan": "#00ff00",
+      "foreground": "#00ff00",
+      "green": "#00ff00",
+      "purple": "#00ff00",
+      "red": "#00ff00",
+      "white": "#00ff00",
+      "yellow": "#00ff00"
     }
   ]
 }
+
