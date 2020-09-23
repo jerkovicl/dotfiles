@@ -48,7 +48,7 @@
       },
       "keys": "ctrl+shift+s"
     },
-    { "command": "tabSearch", "keys": "ctrl+c" },
+    { "command": "tabSearch", "keys": "ctrl+f" },
     {
       "command": "newTab",
       "keys": "ctrl+t"
