@@ -4,6 +4,9 @@ Import-Module oh-my-posh
 Import-Module Terminal-Icons
 #Import-Module PowerTab -ErrorAction SilentlyContinue
 Import-Module PSColor
+Remove-PSReadlineKeyHandler 'Ctrl+r'
+Remove-PSReadlineKeyHandler 'Ctrl+t'
+Import-Module PSFzf
 Set-Theme Paradox #Set-Theme Agnoster
 Set-TerminalIconsColorTheme -Name DevBlackOps
 #$global:PSColor.File.Executable.Color = 'Blue'
