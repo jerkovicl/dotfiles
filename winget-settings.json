@@ -1,0 +1,16 @@
+{
+  // For documentation on these settings, see: https://aka.ms/winget-settings
+  // Gui tool - https://winstall.app/
+  "$schema": "https://aka.ms/winget-settings.schema.json",
+  "source": {
+    "autoUpdateIntervalInMinutes": 5
+  },
+  "visual": {
+    "progressBar": "rainbow" // accent (default), retro, rainbow
+  },
+  "experimentalFeatures": {
+    "experimentalCmd": true,
+    "experimentalArg": true,
+    "experimentalMSStore": true
+  }
+}
