@@ -6,3 +6,4 @@ Install-Module Terminal-Icons -Scope CurrentUser
 Install-Module PsColor -Scope CurrentUser
 Install-Module PSFzf -Scope CurrentUser
 Install-Module DockerCompletion -Scope CurrentUser
+Install-Module NPMTabCompletion -Scope CurrentUser
