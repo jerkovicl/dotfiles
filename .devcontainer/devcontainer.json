@@ -3,26 +3,28 @@
   "extensions": [
     "emmanuelbeziat.vscode-great-icons",
     "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
     "oderwat.indent-rainbow",
     "vtrois.gitmoji-vscode",
-    //"dracula-theme.theme-dracula",
+    "sdras.night-owl",
+    "dracula-theme.theme-dracula",
     "2gua.rainbow-brackets",
-    //"ms-vscode.vscode-typescript-tslint-plugin"
+    "ms-vscode.vscode-typescript-tslint-plugin"
   ],
   "dockerFile": "Dockerfile",
   // Set *default* container specific settings.json values on container create.
   "settings": { 
     "terminal.integrated.shell.linux": "/bin/bash",
     "window.autoDetectColorScheme": true,
-    "workbench.preferredDarkColorTheme": "Dracula",
+    "workbench.preferredDarkColorTheme": "Night Owl",
     "editor.renderWhitespace": "boundary",
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Night Owl",
     "workbench.iconTheme": "vscode-great-icons"
   },
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+  // "forwardPorts": [],
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "npm install"
   // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-	// "remoteUser": "node"
+  // "remoteUser": "node"
 }
