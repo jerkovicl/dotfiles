@@ -5,3 +5,4 @@ Install-Module cd-extras -Scope CurrentUser
 Install-Module Terminal-Icons -Scope CurrentUser
 Install-Module PsColor -Scope CurrentUser
 Install-Module PSFzf -Scope CurrentUser
+Install-Module DockerCompletion -Scope CurrentUser
