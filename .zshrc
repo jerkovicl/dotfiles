@@ -146,7 +146,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions autojump git docker docker-compose zsh-syntax-highlighting dnf npm)
+plugins=(colorize compleat zsh-autosuggestions autojump git docker docker-compose zsh-syntax-highlighting dnf npm jsontools)
 ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
@@ -206,6 +206,7 @@ alias jh="jhipster"
 alias cl="clear"
 alias open="google-chrome"
 alias fopen="xdg-open"
+alias gc="gh_clone"
 
 function dipa(){
   docker rm -v $(docker ps -a -q -f status=exited);
@@ -218,7 +219,11 @@ if [[ $TILIX_ID ]]; then
 fi
 
 function mkcd {
-  command mkdir $1 && cd $1
+  command mkdir  && cd 
+}
+
+function gh_clone () {
+  git clone "https://github.com/$1.git"
 }
 
 # tabtab source for jhipster package
