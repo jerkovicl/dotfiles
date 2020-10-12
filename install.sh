@@ -6,7 +6,7 @@ linux_bootstrap () {
 
   echo "Installing ZSH and dependencies"
   sudo apt-get update
-  sudo apt-get install -y zsh wget curl git autojump
+  sudo apt-get install -y zsh wget curl git autojump python3-pygments
 
   echo "Installing Oh My Zsh"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -24,7 +24,7 @@ linux_bootstrap () {
 
   echo "Linking new files to home"
   for $dotfile in ./.*; do
-    local dotfileName=$(echo $dotfile | awk -F/ '{ print $3 }')
+    local dotfileName=$(echo $dotfile | awk -F/ '{ print  }')
     echo "Linking $dotfileName to ~/$dotfileName"
     ln $dotfile ~/$dotfileName
   done
@@ -47,7 +47,7 @@ linux_bootstrap () {
 
   echo "Linking completions file to ~/zsh/completions"
   for file in ./zshCompletions/*; do
-    local fileName=$(echo $file | awk -F/ '{ print $4 }')
+    local fileName=$(echo $file | awk -F/ '{ print  }')
     echo "Linking $file to ~/.zsh/completions/$fileName"
     ln $file ~/.zsh/completions/$fileName
   done
