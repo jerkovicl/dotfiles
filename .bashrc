@@ -7,7 +7,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 #CUSTOM FUNCTIONS
 gh_clone() {
-  git clone "https://github.com/kn6.42.git"
+  git clone "https://github.com/$1.git"
 }
 
 # ALIASES CUSTOM
