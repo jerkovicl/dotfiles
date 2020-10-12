@@ -9,6 +9,8 @@ Remove-PSReadlineKeyHandler 'Ctrl+t'
 Import-Module PSFzf
 Set-Theme Paradox #Set-Theme Agnoster
 Set-TerminalIconsColorTheme -Name DevBlackOps
+Import-Module DockerCompletion
+Import-Module NPMTabCompletion
 #$global:PSColor.File.Executable.Color = 'Blue'
 #$ThemeSettings.GitSymbols.BranchSymbol = [char]::ConvertFromUtf32(0xE0A0)
 $DefaultUser = 'A687301'
