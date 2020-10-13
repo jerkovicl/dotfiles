@@ -1,3 +1,4 @@
+Import-Module PSReadLine
 Import-Module cd-extras
 Import-Module posh-git
 Import-Module oh-my-posh
