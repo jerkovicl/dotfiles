@@ -9,6 +9,7 @@ Import-Module PSColor
 Remove-PSReadlineKeyHandler 'Ctrl+r'
 Remove-PSReadlineKeyHandler 'Ctrl+t'
 Import-Module PSFzf
+Set-PoshPrompt -Theme paradox # for oh-my-posh v3
 Set-Theme Paradox #Set-Theme Agnoster
 Set-TerminalIconsColorTheme -Name DevBlackOps
 Import-Module DockerCompletion
