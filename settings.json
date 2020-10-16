@@ -227,6 +227,8 @@
     },
     { "command": "toggleRetroEffect", "keys": "ctrl+d" },
     { "command": "commandPalette", "keys": "f1" },
+    { "command": {"action": "sendInput", "input": "clear\r"}, "keys": "alt+k" },
+    { "command": {"action": "sendInput", "input": "cd ..\r"}, "keys": "ctrl+up" },
     // This command opens a new tab with PowerShell in a pane, a vertical pane running  the Command Prompt profile in the C:\ directory, and a horizontal pane running the Ubuntu profile.
     {
       "command": {
@@ -351,7 +353,7 @@
         "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
         "padding": "10, 5, 10, 5",
         "snapOnInput": true,
-        "startingDirectory": "%USERPROFILE%",
+        "startingDirectory": "//wsl$/Ubuntu/home/djlujo",
         "useAcrylic": true
       },
       {
