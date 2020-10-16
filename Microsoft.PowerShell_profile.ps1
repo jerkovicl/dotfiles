@@ -1,3 +1,4 @@
+# themes link https://github.com/JanDeDobbeleer/oh-my-posh?WT.mc_id=-blog-scottha#themes
 Import-Module PSReadLine
 Import-Module cd-extras
 Import-Module posh-git
