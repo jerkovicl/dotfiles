@@ -7,3 +7,5 @@ This repository contains some of my config files:
 - `settings.json` - configuration for Windows Terminal
 - `winget-settings.json` - configuration for Winget
 
+![Terminal][https://raw.githubusercontent.com/jerkovicl/dotfiles/master/docs/media/terminal.jpg]
+
