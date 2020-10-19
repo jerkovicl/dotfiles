@@ -327,7 +327,7 @@
         "tabTitle": "PS Core",
         "tabColor": "#21cf78",
         "startingDirectory": "C:/Git/Siemens_OSEC_Git",
-        "icon": "%USERPROFILE%/OneDrive - Atos/Pictures/github-octocat.png",
+        "icon": "%USERPROFILE%/Pictures/github-octocat.png",
         "backgroundImage": "%USERPROFILE%/Pictures/Groovy_Gorilla.png",
 		    "backgroundImageAlignment": "bottomRight",
 		    "backgroundImageStretchMode": "none",
