@@ -16,6 +16,9 @@ Import-Module DockerCompletion
 Import-Module NPMTabCompletion
 #$global:PSColor.File.Executable.Color = 'Blue'
 #$ThemeSettings.GitSymbols.BranchSymbol = [char]::ConvertFromUtf32(0xE0A0)
+#unicorn symbol [char]::ConvertFromUtf32(0x01F984)
+$ThemeSettings.PromptSymbols.StartSymbol = [char]::ConvertFromUtf32(0x0001F525) 
+$ThemeSettings.PromptSymbols.PromptIndicator = [char]::ConvertFromUtf32(0x01F680) +[char]::ConvertFromUtf32(0x276F)
 $DefaultUser = 'A687301'
 $Env:NODE_OPTIONS = "max-old-space-size=8192"
 
