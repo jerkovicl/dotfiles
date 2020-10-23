@@ -4,6 +4,7 @@ Import-Module cd-extras
 Import-Module posh-git
 Import-Module oh-my-posh
 Import-Module Terminal-Icons
+#Import-Module Get-ChildItemColor
 #Import-Module PowerTab -ErrorAction SilentlyContinue
 Import-Module PSColor
 Remove-PSReadlineKeyHandler 'Ctrl+r'
@@ -87,15 +88,27 @@ function Git-Status {
    git status
 }
 
+function GitLogPretty {
+  git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all
+}
+
 function Dir-Icons {
    Get-ChildItem | Format-Wide
 }
 
+function GetMyIp { curl -L tool.lu/ip }
+
+function GoBack { Set-Location .. }
+
+Set-Alias .. GoBack
+Set-Alias -Name np -Value notepad++
 Set-Alias dwr Dotnet-Rebuild
 Set-Alias gac Git-Commit
-Set-Alias -Name np -Value notepad++
 Set-Alias gs Git-Status
-Set-Alias lsi Dir-Icons
+Set-Alias glp GitLogPretty
+Set-Alias ls Dir-Icons
 Set-Alias pum Update-Modules
 Set-Alias pcm Check-Modules
 Set-Alias gci Get-ComputerInfo
+Set-Alias myip GetMyIp
+
