@@ -15,7 +15,9 @@
   "alwaysOnTop": false,
   "largePasteWarning": false,
   "multiLinePasteWarning": false,
-  "useTabSwitcher": true,
+  "launchMode": "default", // focus, maximizedFocus
+  "useTabSwitcher": "mru", // inOrder
+  "disableAnimations": false,
   "wordDelimiters": " ./\\()\"\u0027-:,.;\u003c\u003e~!@#$%^\u0026*|+=[]{}~?�",
   // "wordDelimiters": " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
   //nt, sp, and ft as command line arguments for new tab, split pane, and focus tab,
@@ -281,7 +283,7 @@
         "fontSize": 12,
         "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
         "historySize": 9001,
-        "icon": "ms-appx:///ProfileIcons/{0caa0dad-35be-5f56-a8ff-afceeeaa6101}.png",
+        "icon": "⚡",
         "name": "Star Wars",
         "padding": "0, 0, 0, 0",
         "snapOnInput": true,
@@ -328,10 +330,11 @@
         "tabColor": "#21cf78",
         "startingDirectory": "C:/Git/Siemens_OSEC_Git",
         "icon": "%USERPROFILE%/Pictures/github-octocat.png",
-        "backgroundImage": "%USERPROFILE%/Pictures/Groovy_Gorilla.png",
+        "backgroundImage": "%USERPROFILE%/Pictures/Groovy_Gorilla.png", // desktopWallpaper
 		    "backgroundImageAlignment": "bottomRight",
 		    "backgroundImageStretchMode": "none",
-        "useAcrylic": true
+        "useAcrylic": true,
+        "bellStyle": "audible"
       },
       {
         "guid": "{63e31163-583f-5850-9c1e-24e227dd2da9}",
