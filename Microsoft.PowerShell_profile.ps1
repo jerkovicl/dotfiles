@@ -101,6 +101,15 @@ function GetMyIp { curl -L tool.lu/ip }
 
 function GoBack { Set-Location .. }
 
+# check if npm package is tree shakeable
+function IsNpmPackageEsm {
+  param (
+       [string] $packagename
+   )
+  npx is-esm $packagename
+}
+
+
 Set-Alias .. GoBack
 Set-Alias -Name np -Value notepad++
 Set-Alias dwr Dotnet-Rebuild
@@ -112,4 +121,4 @@ Set-Alias pum Update-Modules
 Set-Alias pcm Check-Modules
 Set-Alias gci Get-ComputerInfo
 Set-Alias myip GetMyIp
-
+Set-Alias isesm IsNpmPackageEsm
