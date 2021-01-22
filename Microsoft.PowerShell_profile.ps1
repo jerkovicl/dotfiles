@@ -1,5 +1,5 @@
 # themes link https://github.com/JanDeDobbeleer/oh-my-posh?WT.mc_id=-blog-scottha#themes
-# Upgrade module trick <path to pwsh.exe> -noprofile -command "Install-Module PSReadLine -Force -SkipPublisherCheck -AllowPrerelease"
+# Upgrade module trick  cd "C:\Program Files\PowerShell\7\" && pwsh.exe -noprofile -command "Install-Module PSReadLine -Force -SkipPublisherCheck -AllowPrerelease"
 Import-Module PSReadLine
 Import-Module cd-extras
 Import-Module posh-git
