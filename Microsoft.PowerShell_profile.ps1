@@ -8,6 +8,15 @@ Import-Module Terminal-Icons
 #Import-Module Get-ChildItemColor
 #Import-Module PowerTab -ErrorAction SilentlyContinue
 Import-Module PSColor
+# PSReadLine settings
+Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+Set-PSReadLineOption -Colors @{ 
+ InlinePrediction = '#39A3F9' 
+ ListPredictionSelected = '#39A3F9'
+} 
+#ListPrediction 
+Set-PSReadLineOption -PredictionViewStyle ListView
+#Set-PSReadLineOption -EditMode Windows
 Remove-PSReadlineKeyHandler 'Ctrl+r'
 Remove-PSReadlineKeyHandler 'Ctrl+t'
 Import-Module PSFzf
