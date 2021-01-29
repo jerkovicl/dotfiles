@@ -17,13 +17,18 @@
   "multiLinePasteWarning": false,
   "launchMode": "default", // focus, maximizedFocus
   "useTabSwitcher": "mru", // inOrder
+  "tabSwitcherMode": "mru",
   "disableAnimations": false,
   "wordDelimiters": " ./\\()\"\u0027-:,.;\u003c\u003e~!@#$%^\u0026*|+=[]{}~?�",
+  // Launch terminal with multiple tabs
+  "startupActions": "new-tab -d C:/Git/HR_Euroherc_Git/Provos/Provos.Frontend; new-tab -d C:/Git/HR_Euroherc_Git/Provos/Provos.Api --tabColor #fc3d03",
+  //Launch terminal with one tab split into a PowerShell pane and an Ubuntu pane
+  //"startupActions": "split-pane -p PowerShell ; split-pane -p Ubuntu"
   // "wordDelimiters": " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
   //nt, sp, and ft as command line arguments for new tab, split pane, and focus tab,
   // "disabledProfileSources": ["Windows.Terminal.Wsl", "Windows.Terminal.Azure", "Windows.Terminal.PowershellCore"]
   // "altGrAliasing": false
-  "keybindings": [
+  "actions": [
     {
       "command": "closeTab",
       "keys": "ctrl+w"
@@ -238,7 +243,17 @@
         "commandline": "new-tab pwsh.exe ; split-pane -p \"Command Prompt\" -d C:\\ ; split-pane -p \"Ubuntu\" -H"
       },
       "keys": "ctrl+a"
-    }
+    },
+    // open settings ui
+    { "command": { "action": "openSettings", "target": "settingsUI" }, "keys": "ctrl+shift+," },
+    // scroll to the top and bottom of history
+    { "command": "scrollToTop", "keys": "ctrl+shift+home" },
+    { "command": "scrollToBottom", "keys": "ctrl+shift+end" },
+    // focus on most recently used pane
+    { "command": { "action": "moveFocus", "direction": "previous" }, "keys": "ctrl+alt+left" },
+    // move your tabs backward (left) and forward (right) using the keyboard
+    { "command": { "action": "moveTab", "direction": "backward" }, "keys": "" },
+    { "command": { "action": "moveTab", "direction": "forward" }, "keys": "" }
   ],
   "profiles": {
     "defaults": {
@@ -319,7 +334,7 @@
         "closeOnExit": true,
         "colorScheme": "Night Owl Dark",
         "cursorColor": "#80A4C2",
-        "cursorShape": "bar",
+        "cursorShape": "doubleUnderscore", // bar
         "fontSize": 11,
         "fontWeight": "normal",
         "historySize": 9001,
@@ -334,7 +349,8 @@
 		    "backgroundImageAlignment": "bottomRight",
 		    "backgroundImageStretchMode": "none",
         "useAcrylic": true,
-        "bellStyle": "audible"
+        "bellStyle": "all" // audible, visible
+        // "experimental.pixelShaderEffect": "C:\\temp\\invert.hlsl"
       },
       {
         "guid": "{63e31163-583f-5850-9c1e-24e227dd2da9}",
