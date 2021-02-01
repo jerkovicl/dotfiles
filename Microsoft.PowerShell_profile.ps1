@@ -1,4 +1,5 @@
 # themes link https://github.com/JanDeDobbeleer/oh-my-posh?WT.mc_id=-blog-scottha#themes
+# psreadline keybinds samples https://raw.githubusercontent.com/PowerShell/PSReadLine/master/PSReadLine/SamplePSReadLineProfile.ps1
 # Upgrade module trick  cd "C:\Program Files\PowerShell\7\" && pwsh.exe -noprofile -command "Install-Module PSReadLine -Force -SkipPublisherCheck -AllowPrerelease"
 # Upgrade to oh-my-posh v3 Update-Module -Name oh-my-posh -AllowPrerelease -Scope CurrentUser
 Import-Module PSReadLine
@@ -18,10 +19,14 @@ Set-PSReadLineOption -Colors @{
 #ListPrediction 
 Set-PSReadLineOption -PredictionViewStyle ListView
 #Set-PSReadLineOption -EditMode Windows
+Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+Set-PSReadLineKeyHandler -Chord 'Ctrl+d,Ctrl+c' -Function CaptureScreen
+#Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+#Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 Remove-PSReadlineKeyHandler 'Ctrl+r'
 Remove-PSReadlineKeyHandler 'Ctrl+t'
 Import-Module PSFzf
-Set-PoshPrompt -Theme paradox # for oh-my-posh v3
+Set-PoshPrompt -Theme  ~/.go-my-posh.json # for oh-my-posh v3
 Set-Theme Paradox #Set-Theme Agnoster
 Set-TerminalIconsColorTheme -Name DevBlackOps
 Import-Module DockerCompletion
