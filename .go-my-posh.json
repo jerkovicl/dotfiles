@@ -18,7 +18,7 @@
           "leading_diamond": "",
           "trailing_diamond": "",
           "properties": {
-            "prefix": " 🚀🔥",
+            "prefix": "🚀🔥",
             "postfix": "",
             "macos": "mac"
           }
@@ -130,6 +130,16 @@
             "discharging_color": "#ff5722",
             "postfix": "\uF295 ",
             "display_charging": true
+          }
+        },
+        {
+          "type": "time",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "#ffffff",
+          "background": "#2e9599",
+          "properties": {
+            "time_format": "15:04:05"
           }
         },
         {
