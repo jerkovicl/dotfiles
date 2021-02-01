@@ -1,5 +1,6 @@
 # themes link https://github.com/JanDeDobbeleer/oh-my-posh?WT.mc_id=-blog-scottha#themes
 # Upgrade module trick  cd "C:\Program Files\PowerShell\7\" && pwsh.exe -noprofile -command "Install-Module PSReadLine -Force -SkipPublisherCheck -AllowPrerelease"
+# Upgrade to oh-my-posh v3 Update-Module -Name oh-my-posh -AllowPrerelease -Scope CurrentUser
 Import-Module PSReadLine
 Import-Module cd-extras
 Import-Module posh-git
