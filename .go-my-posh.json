@@ -1,7 +1,9 @@
 {
-  "final_space": true,
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh3/main/themes/schema.json",
   "console_title": true,
-  "console_title_style": "folder",
+  "final_space": true,
+  "console_title_style": "template", // folder
+  "console_title_template": "{{.Path}} : {{.Shell}}",
   "blocks": [
     {
       "type": "prompt",
@@ -157,6 +159,25 @@
             "display_exit_code": false,
             "error_color": "#f1184c",
             "prefix": "<transparent></> "
+          }
+        }
+      ]
+    },
+    {
+      "type": "newline"
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#43D426",
+          "properties": {
+            "prefix": "",
+            "postfix": " ",
+            "text": "\u276F"
           }
         }
       ]
