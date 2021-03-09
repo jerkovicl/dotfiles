@@ -19,6 +19,9 @@
   "useTabSwitcher": "mru", // inOrder
   "tabSwitcherMode": "mru",
   "disableAnimations": false,
+  "windowingBehavior": "useExisting",
+  "focusFollowMouse": true,
+  "centerOnLaunch": true,
   "wordDelimiters": " ./\\()\"\u0027-:,.;\u003c\u003e~!@#$%^\u0026*|+=[]{}~?�",
   // Launch terminal with multiple tabs
   "startupActions": "new-tab -d C:/Git/HR_Euroherc_Git/Provos/Provos.Frontend; new-tab -d C:/Git/HR_Euroherc_Git/Provos/Provos.Api --tabColor #fc3d03",
@@ -253,7 +256,11 @@
     { "command": { "action": "moveFocus", "direction": "previous" }, "keys": "ctrl+alt+left" },
     // move your tabs backward (left) and forward (right) using the keyboard
     { "command": { "action": "moveTab", "direction": "backward" }, "keys": "" },
-    { "command": { "action": "moveTab", "direction": "forward" }, "keys": "" }
+    { "command": { "action": "moveTab", "direction": "forward" }, "keys": "" },
+    { "command": "newWindow", "keys": "ctrl+shift+n" },
+    { "command": "toggleReadOnlyMode", "keys": "ctrl+shift+r" },
+    { "command": { "action": "findMatch", "direction": "next" }, "keys": "" },
+    { "command": { "action": "findMatch", "direction": "prev" }, "keys": "" }
   ],
   "profiles": {
     "defaults": {
