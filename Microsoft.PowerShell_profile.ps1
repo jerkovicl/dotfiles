@@ -9,7 +9,7 @@ Import-Module oh-my-posh
 Import-Module Terminal-Icons
 #Import-Module Get-ChildItemColor
 #Import-Module PowerTab -ErrorAction SilentlyContinue
-Import-Module PSColor
+#Import-Module PSColor
 # PSReadLine settings
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 Set-PSReadLineOption -Colors @{ 
