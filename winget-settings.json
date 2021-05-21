@@ -14,6 +14,7 @@
     "experimentalMSStore": true,
     "list": true,
     "upgrade": true,
-    "uninstall": true
+    "uninstall": true,
+    "export": true
   }
 }
