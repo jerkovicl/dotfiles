@@ -267,7 +267,11 @@
       "fontFace": "JetBrainsMono NF",
       // "fontFace": "CascadiaCode Nerd Font"
       // "fontFace": "Delugia Nerd Font"
-      "colorScheme": "Night Owl Dark"
+      "colorScheme": "Night Owl Dark",
+      "unfocusedAppearance": 
+      {
+        "backgroundImageOpacity": 0.3
+      }
     },
     "list": [
       {
