@@ -1,4 +1,6 @@
 export TERM="xterm-256color" # This sets up colors properly
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # workaround as per https://superuser.com/questions/1222867/zsh-completion-functions-broken
 FPATH=$HOME/.oh-my-zsh/plugins/git:$HOME/.oh-my-zsh/functions:$HOME/.oh-my-zsh/completions:/usr/share/zsh/site-functions:$HOME/usr/share/zsh/$ZSH_VERSION/functions:$FPATH
@@ -223,7 +225,7 @@ function mkcd {
 }
 
 function gh_clone () {
-  git clone "https://github.com/$1.git"
+  git clone "https://github.com/.git"
 }
 
 # tabtab source for jhipster package
