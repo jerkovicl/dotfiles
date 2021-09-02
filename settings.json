@@ -32,6 +32,10 @@
   // "disabledProfileSources": ["Windows.Terminal.Wsl", "Windows.Terminal.Azure", "Windows.Terminal.PowershellCore"]
   // "altGrAliasing": false
   "actions": [
+    { 
+      "icon": "🔥",
+      "command": { "action": "globalSummon", "name": "quake", "dropdownDuration": 200, "toggleVisibility": true, "monitor": "any", "desktop": "toCurrent" }, "keys": "win+¸" 
+    },
     {
       "command": "closeTab",
       "keys": "ctrl+w"
@@ -41,6 +45,9 @@
       "name": null,
       "command": { "action": "copy", "singleLine": false },
       "keys": "ctrl+c"
+      
+      
+      
     },
     { "name": null, "command": "paste", "keys": "ctrl+v" },
     { "command": "find", "keys": "ctrl+shift+f" },
