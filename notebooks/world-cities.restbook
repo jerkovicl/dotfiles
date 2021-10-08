@@ -1,0 +1,14 @@
+[
+{
+kind: 1,
+language: "markdown",
+value: "# World Cities REST Notebook Designed for testing new [Leaflet Map View](https://github.com/RandomFractals/vscode-leaflet) vscode extension with custom [LeafletJS](https://leafletjs.com) notebook cell output renderer for [geojson](https://geojson.org) and [topojson](https://github.com/topojson/topojson) geo data files.",
+outputs: [ ]
+},
+{
+kind: 2,
+language: "rest-book",
+value: "GET https://raw.githubusercontent.com/RandomFractals/vscode-leaflet/main/data/geojson/world-cities.geojson Content-Type: application/geo+json",
+outputs: [ ]
+}
+]
