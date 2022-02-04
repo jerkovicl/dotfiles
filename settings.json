@@ -36,6 +36,16 @@
       "icon": "🔥",
       "command": { "action": "globalSummon", "name": "quake", "dropdownDuration": 200, "toggleVisibility": true, "monitor": "any", "desktop": "toCurrent" }, "keys": "win+¸" 
     },
+    // New admin tab action
+    { 
+      "icon": "🛑",
+      "command": { "action": "newTab", "elevate": true }, "keys": "ctrl+shift+1"
+    },
+    // Admin Split pane action
+    { 
+      "icon": "🛑I🛑",
+      "command": { "action": "splitPane", "split": "auto", "elevate": true }, "keys": "alt+shift+e"
+    },
     {
       "command": "closeTab",
       "keys": "ctrl+w"
@@ -367,7 +377,10 @@
 		    "backgroundImageAlignment": "bottomRight",
 		    "backgroundImageStretchMode": "none",
         "useAcrylic": true,
-        "bellStyle": "all" // audible, visible
+        "bellStyle": "all", // audible, visible
+        // "bellSound": "path/to/file",
+        "elevate": true,
+        "experimental.useAtlasEngine": true
         // "experimental.pixelShaderEffect": "C:\\temp\\invert.hlsl"
       },
       {
