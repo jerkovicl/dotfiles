@@ -32,19 +32,29 @@
   // "disabledProfileSources": ["Windows.Terminal.Wsl", "Windows.Terminal.Azure", "Windows.Terminal.PowershellCore"]
   // "altGrAliasing": false
   "actions": [
-    { 
+    {
       "icon": "🔥",
-      "command": { "action": "globalSummon", "name": "quake", "dropdownDuration": 200, "toggleVisibility": true, "monitor": "any", "desktop": "toCurrent" }, "keys": "win+¸" 
+      "command": {
+        "action": "globalSummon",
+        "name": "quake",
+        "dropdownDuration": 200,
+        "toggleVisibility": true,
+        "monitor": "any",
+        "desktop": "toCurrent"
+      },
+      "keys": "win+¸"
     },
     // New admin tab action
-    { 
+    {
       "icon": "🛑",
-      "command": { "action": "newTab", "elevate": true }, "keys": "ctrl+shift+1"
+      "command": { "action": "newTab", "elevate": true },
+      "keys": "ctrl+shift+1"
     },
     // Admin Split pane action
-    { 
+    {
       "icon": "🛑I🛑",
-      "command": { "action": "splitPane", "split": "auto", "elevate": true }, "keys": "alt+shift+e"
+      "command": { "action": "splitPane", "split": "auto", "elevate": true },
+      "keys": "alt+shift+e"
     },
     {
       "command": "closeTab",
@@ -55,9 +65,6 @@
       "name": null,
       "command": { "action": "copy", "singleLine": false },
       "keys": "ctrl+c"
-      
-      
-      
     },
     { "name": null, "command": "paste", "keys": "ctrl+v" },
     { "command": "find", "keys": "ctrl+shift+f" },
@@ -254,8 +261,8 @@
     },
     { "command": "toggleRetroEffect", "keys": "ctrl+d" },
     { "command": "commandPalette", "keys": "f1" },
-    { "command": {"action": "sendInput", "input": "clear\r"}, "keys": "alt+k" },
-    { "command": {"action": "sendInput", "input": "cd ..\r"}, "keys": "ctrl+up" },
+    { "command": { "action": "sendInput", "input": "clear\r" }, "keys": "alt+k" },
+    { "command": { "action": "sendInput", "input": "cd ..\r" }, "keys": "ctrl+up" },
     // This command opens a new tab with PowerShell in a pane, a vertical pane running  the Command Prompt profile in the C:\ directory, and a horizontal pane running the Ubuntu profile.
     {
       "command": {
@@ -285,8 +292,7 @@
       // "fontFace": "CascadiaCode Nerd Font"
       // "fontFace": "Delugia Nerd Font"
       "colorScheme": "Night Owl Dark",
-      "unfocusedAppearance": 
-      {
+      "unfocusedAppearance": {
         "backgroundImageOpacity": 0.3
       }
     },
@@ -374,8 +380,8 @@
         "startingDirectory": "C:/Git/Siemens_OSEC_Git",
         "icon": "%USERPROFILE%/Pictures/github-octocat.png",
         "backgroundImage": "%USERPROFILE%/Pictures/Groovy_Gorilla.png", // desktopWallpaper
-		    "backgroundImageAlignment": "bottomRight",
-		    "backgroundImageStretchMode": "none",
+        "backgroundImageAlignment": "bottomRight",
+        "backgroundImageStretchMode": "none",
         "useAcrylic": true,
         "bellStyle": "all", // audible, visible
         // "bellSound": "path/to/file",
@@ -683,26 +689,25 @@
       "yellow": "#00ff00"
     },
     {
-    "name" : "Dracula",
-    "background" : "#272935",
-    "black" : "#272935",
-    "blue" : "#BD93F9",
-    "brightBlack" : "#555555",
-    "brightBlue" : "#BD93F9",
-    "brightCyan" : "#8BE9FD",
-    "brightGreen" : "#50FA7B",
-    "brightPurple" : "#FF79C6",
-    "brightRed" : "#FF5555",
-    "brightWhite" : "#FFFFFF",
-    "brightYellow" : "#F1FA8C",
-    "cyan" : "#6272A4",
-    "foreground" : "#F8F8F2",
-    "green" : "#50FA7B",
-    "purple" : "#6272A4",
-    "red" : "#FF5555",
-    "white" : "#F8F8F2",
-    "yellow" : "#FFB86C"
+      "name": "Dracula",
+      "background": "#272935",
+      "black": "#272935",
+      "blue": "#BD93F9",
+      "brightBlack": "#555555",
+      "brightBlue": "#BD93F9",
+      "brightCyan": "#8BE9FD",
+      "brightGreen": "#50FA7B",
+      "brightPurple": "#FF79C6",
+      "brightRed": "#FF5555",
+      "brightWhite": "#FFFFFF",
+      "brightYellow": "#F1FA8C",
+      "cyan": "#6272A4",
+      "foreground": "#F8F8F2",
+      "green": "#50FA7B",
+      "purple": "#6272A4",
+      "red": "#FF5555",
+      "white": "#F8F8F2",
+      "yellow": "#FFB86C"
     }
   ]
 }
-
