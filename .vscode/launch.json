@@ -2,13 +2,21 @@
     "version": "0.2.0",
     "configurations": [
         {
+            // Launch Microsoft Edge in the background
             "type": "pwa-msedge",
             "request": "launch",
-            "name": "webdebug",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}",
+            // Use the stable branch of Microsoft Edge
             "runtimeExecutable": "stable",
-            "runtimeArgs": ["--headless"]
+            // run it as headless (no window)
+            "runtimeArgs": ["--headless"],
+            // name of the debugging session
+            "name": "webdebug",
+            // Open the address localhost:8080
+            // This needs to run - I use the http-server
+            // npm package
+            "url": "http://localhost:8080",
+            // Open the workspace at the root of the server
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
