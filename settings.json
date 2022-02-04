@@ -25,6 +25,7 @@
   "wordDelimiters": " ./\\()\"\u0027-:,.;\u003c\u003e~!@#$%^\u0026*|+=[]{}~?�",
   // Launch terminal with multiple tabs
   "startupActions": "new-tab -d C:/Git/HR_Euroherc_Git/Provos/Provos.Frontend; new-tab -d C:/Git/HR_Euroherc_Git/Provos/Provos.Api --tabColor #fc3d03",
+  "firstWindowPreference": "persistedWindowLayout",
   //Launch terminal with one tab split into a PowerShell pane and an Ubuntu pane
   //"startupActions": "split-pane -p PowerShell ; split-pane -p Ubuntu"
   // "wordDelimiters": " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
@@ -386,7 +387,8 @@
         "bellStyle": "all", // audible, visible
         // "bellSound": "path/to/file",
         "elevate": true,
-        "experimental.useAtlasEngine": true
+        "experimental.useAtlasEngine": true,
+        "adjustIndistinguishableColors": true
         // "experimental.pixelShaderEffect": "C:\\temp\\invert.hlsl"
       },
       {
