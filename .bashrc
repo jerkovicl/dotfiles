@@ -1,6 +1,9 @@
 eval `ssh-agent -s` #Turning on SSH-Agent
 #ssh-add $pemfiles
 
+# default editor
+[ -z "$EDITOR" ] && export EDITOR=vim
+
 # Fixing global terminal colors
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
