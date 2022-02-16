@@ -160,7 +160,9 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
+# Only set and export EDITOR and GIT_EDITOR env variables if they have been empty.
 [ -z "$EDITOR" ] && export EDITOR=vim
+[ -z "$GIT_EDITOR" ] && export GIT_EDITOR=vim
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
