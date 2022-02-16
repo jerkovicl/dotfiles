@@ -1,8 +1,9 @@
 eval `ssh-agent -s` #Turning on SSH-Agent
 #ssh-add $pemfiles
 
-# default editor
+# Only set and export EDITOR and GIT_EDITOR env variables if they have been empty.
 [ -z "$EDITOR" ] && export EDITOR=vim
+[ -z "$GIT_EDITOR" ] && export GIT_EDITOR=vim
 
 # Fixing global terminal colors
 export CLICOLOR=1
