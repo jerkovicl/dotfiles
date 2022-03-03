@@ -2,6 +2,8 @@
 # psreadline keybinds samples https://raw.githubusercontent.com/PowerShell/PSReadLine/master/PSReadLine/SamplePSReadLineProfile.ps1
 # Upgrade module trick  cd "C:\Program Files\PowerShell\7\" && pwsh.exe -noprofile -command "Install-Module PSReadLine -Force -SkipPublisherCheck -AllowPrerelease"
 # Upgrade to oh-my-posh v3 Update-Module -Name oh-my-posh -AllowPrerelease -Scope CurrentUser
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+
 Import-Module PSReadLine
 Import-Module cd-extras
 Import-Module posh-git
