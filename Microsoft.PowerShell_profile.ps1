@@ -188,3 +188,5 @@ Set-Alias pcm Check-Modules
 Set-Alias gci Get-ComputerInfo
 Set-Alias myip GetMyIp
 Set-Alias isesm IsNpmPackageEsm
+# setup fnm as node manager
+fnm env --use-on-cd | Out-String | Invoke-Expression
