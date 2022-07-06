@@ -1,9 +1,9 @@
-# themes link https://github.com/JanDeDobbeleer/oh-my-posh?WT.mc_id=-blog-scottha#themes
-# psreadline keybinds samples https://raw.githubusercontent.com/PowerShell/PSReadLine/master/PSReadLine/SamplePSReadLineProfile.ps1
+# themes link https: //github.com/JanDeDobbeleer/oh-my-posh?WT.mc_id=-blog-scottha#themes
+# psreadline keybinds samples https: //raw.githubusercontent.com/PowerShell/PSReadLine/master/PSReadLine/SamplePSReadLineProfile.ps1
 # Upgrade module trick  cd "C:\Program Files\PowerShell\7\" && pwsh.exe -noprofile -command "Install-Module PSReadLine -Force -SkipPublisherCheck -AllowPrerelease"
-# Upgrade to oh-my-posh v3 Update-Module -Name oh-my-posh -AllowPrerelease -Scope CurrentUser
-# install: oh-my-posh winget install JanDeDobbeleer.OhMyPosh
-# upgrade: oh-my-posh winget upgrade JanDeDobbeleer.OhMyPosh
+# Upgrade any module: Update-Module -Name modulename -AllowPrerelease -Scope CurrentUser
+# install ohmyposh: oh-my-posh winget install JanDeDobbeleer.OhMyPosh
+# upgrade ohmyposh: oh-my-posh winget upgrade JanDeDobbeleer.OhMyPosh
 
 # ENV VARS
 
@@ -30,8 +30,8 @@ $PSReadLineOptions = @{
     HistoryNoDuplicates = $true
     HistorySearchCursorMovesToEnd = $true
     Colors = @{
-     "InlinePrediction" = '#39A3F9'
-     "ListPredictionSelected" = '#39A3F9'
+      "InlinePrediction" = '#39A3F9'
+      "ListPredictionSelected" = '#39A3F9'
     }
 }
 Set-PSReadLineOption @PSReadLineOptions
@@ -52,22 +52,25 @@ Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
         $Local:word = $wordToComplete.Replace('"', '""')
         $Local:ast = $commandAst.ToString().Replace('"', '""')
         winget complete --word="$Local:word" --commandline "$Local:ast" --position $cursorPosition | ForEach-Object {
-            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
-        }
+        [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+    }
 }
 
 # PowerShell parameter completion shim for the dotnet CLI
 Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
     param($commandName, $wordToComplete, $cursorPosition)
         dotnet complete --position $cursorPosition "$wordToComplete" | ForEach-Object {
-           [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
-        }
+        [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+    }
 }
 
-function GoAdmin { start-process pwsh –verb runAs }
+function GoAdmin { start-process pwsh –verb runAs
+}
 
 function Check-Modules {
-   Get-InstalledModule | foreach { $b = (find-module $_.name).version ; if ($b -ne $_.version) { Write-host "$($_.name) has an update from $($_.version) to $b" } }
+   Get-InstalledModule | foreach { $b = (find-module $_.name).version ; if ($b -ne $_.version) { Write-host "$($_.name) has an update from $($_.version) to $b"
+        }
+    }
 }
 
 function Update-Modules {
@@ -111,7 +114,9 @@ function gco {
 }
 
 function gfeat {
-    if($null -eq $args[1]) {
+    if($null -eq $args[
+        1
+    ]) {
         gco "feat: $($args[0])"
     }else {
         gco "feat($($args[0])): $($args[1])"
@@ -119,7 +124,9 @@ function gfeat {
 }
 
 function gfix {
-    if($null -eq $args[1]) {
+    if($null -eq $args[
+        1
+    ]) {
         gco "fix: $($args[0])"
     }else {
         gco "fix($($args[0])): $($args[1])"
@@ -127,7 +134,9 @@ function gfix {
 }
 
 function gtest {
-    if($null -eq $args[1]) {
+    if($null -eq $args[
+        1
+    ]) {
         gco "test: $($args[0])"
     }else {
         gco "test($($args[0])): $($args[1])"
@@ -135,7 +144,9 @@ function gtest {
 }
 
 function gdocs {
-    if($null -eq $args[1]) {
+    if($null -eq $args[
+        1
+    ]) {
         gco "docs: $($args[0])"
     }else {
         gco "docs($($args[0])): $($args[1])"
@@ -143,7 +154,9 @@ function gdocs {
 }
 
 function gstyle {
-    if($null -eq $args[1]) {
+    if($null -eq $args[
+        1
+    ]) {
         gco "style: $($args[0])"
     }else {
         gco "style($($args[0])): $($args[1])"
@@ -151,7 +164,9 @@ function gstyle {
 }
 
 function grefactor {
-    if($null -eq $args[1]) {
+    if($null -eq $args[
+        1
+    ]) {
         gco "refactor: $($args[0])"
     }else {
         gco "refactor($($args[0])): $($args[1])"
@@ -159,7 +174,9 @@ function grefactor {
 }
 
 function gperf {
-    if($null -eq $args[1]) {
+    if($null -eq $args[
+        1
+    ]) {
         gco "perf: $($args[0])"
     }else {
         gco "perf($($args[0])): $($args[1])"
@@ -167,7 +184,9 @@ function gperf {
 }
 
 function gchore {
-    if($null -eq $args[1]) {
+    if($null -eq $args[
+        1
+    ]) {
         gco "chore: $($args[0])"
     }else {
         gco "chore($($args[0])): $($args[1])"
@@ -214,15 +233,17 @@ function Dir-Icons {
    Get-ChildItem | Format-Wide
 }
 
-function GetMyIp { curl -L tool.lu/ip }
+function GetMyIp { curl -L tool.lu/ip
+}
 
-function GoBack { Set-Location .. }
+function GoBack { Set-Location ..
+}
 
 # check if npm package is tree shakeable
 function IsNpmPackageEsm {
   param (
-       [string] $packagename
-   )
+    [string] $packagename
+  )
   npx is-esm $packagename
 }
 
@@ -241,14 +262,17 @@ function Add-Path {
       The name of the directory to add to the current path.
   #>
 
-  [CmdletBinding()]
+  [CmdletBinding()
+    ]
   param (
     [Parameter(
       Mandatory=$True,
       ValueFromPipeline=$True,
       ValueFromPipelineByPropertyName=$True,
-      HelpMessage='What directory would you like to add?')]
-    [Alias('dir')]
+      HelpMessage='What directory would you like to add?')
+    ]
+    [Alias('dir')
+    ]
     [string[]]$Directory
   )
 
@@ -258,22 +282,24 @@ function Add-Path {
     foreach ($dir in $Directory) {
       if ($Path -contains $dir) {
         Write-Verbose "$dir is already present in PATH"
-      } else {
+            } else {
         if (-not (Test-Path $dir)) {
           Write-Verbose "$dir does not exist in the filesystem"
-        } else {
+                } else {
           $Path += $dir
+                }
+            }
         }
-      }
-    }
 
     $env:PATH = [String]::Join(';', $Path)
-  }
+    }
 }
 
 #C:\Tools\Tools\utils\start_docker.ps1
 function StartWSLDocker {
-  $ip = (wsl sh -c "hostname -I").Split(" ")[0]
+  $ip = (wsl sh -c "hostname -I").Split(" ")[
+        0
+    ]
   netsh interface portproxy add v4tov4 listenport=2375 connectport=2375 connectaddress=$ip
   wsl sh -c "sudo dockerd -H tcp://$ip"
 }
