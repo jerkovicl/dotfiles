@@ -28,6 +28,7 @@
   // "wordDelimiters": " ./\\()\"\u0027-:,.;\u003c\u003e~!@#$%^\u0026*|+=[]{}~?�",
   //Launch terminal with one tab split into a PowerShell pane and an Ubuntu pane
   //"startupActions": "split-pane -p PowerShell ; split-pane -p Ubuntu"
+  //"startupActions": "nt -p PowerShell --title FiyuFrontend -d C:\\Git\\fiyu\\frontend ; sp -s .25 --title FiyuFrontend -d C:\\Git\\fiyu\\frontend ; sp -s .30 --title FiyuDevops -d C:\\Git\\fiyu\\devops ; nt -p PowerShell --title FlasterFrontend --tabColor #FFC0CB -d C:\\Git\\flaster-frontend",
   // "wordDelimiters": " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
   //nt, sp, and ft as command line arguments for new tab, split pane, and focus tab,
   // "disabledProfileSources": ["Windows.Terminal.Wsl", "Windows.Terminal.Azure", "Windows.Terminal.PowershellCore"]
