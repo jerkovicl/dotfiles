@@ -1,52 +1,57 @@
 [winUpdater]
-	recentlySeenVersion = 2.25.0.windows.1
+    recentlySeenVersion = 2.25.0.windows.1
 [user]
-	name = Luka Jerkovic
-	email = luka.jerkovic@XXX.com
-	signingkey = XXXXX
+    name = Luka Jerkovic
+    email = xxxx
+    signingkey = xxx
 [color "status"]
-  added = green bold
-  changed = red bold strike
-  untracked = cyan
-  branch = yellow black bold ul
-[diff]
-	tool = p4merge
-[difftool "p4merge"]
-	path = "C:\\Users\\LukaJerković\\Tools\\cmder\\bin\\p4merge.exe"
-	keepBackup = false
+    added = green bold
+    changed = red bold strike
+    untracked = cyan
+    branch = yellow black bold ul
 [merge]
-	tool = p4merge
+    tool = vscode
+[mergetool]
+    writeToTemp = true
+    keepBackup = false
+[mergetool "vscode"]
+    cmd = code --wait -m $REMOTE $LOCAL $BASE $MERGED
+[diff]
+    tool = vscode
+    colorMoved = zebra
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[difftool "p4merge"]
+    path = "C:\\Users\\LukaJerković\\Tools\\cmder\\bin\\p4merge.exe"
+    keepBackup = false
 [mergetool "p4merge"]
-	path = "C:\\Users\\LukaJerković\\Tools\\cmder\\bin\\p4merge.exe"
-	keepBackup = false
-	prompt = false
-	trustExitCode = true
+    path = "C:\\Users\\LukaJerković\\Tools\\cmder\\bin\\p4merge.exe"
+    keepBackup = false
+    prompt = false
+    trustExitCode = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [core]
-	longpaths = true
-	autocrlf = input
-	fsmonitor = true
-	editor = code --wait
+    longpaths = true
+    autocrlf = input
+    fsmonitor = true
+    editor = code --wait
 [help]
-	autocorrect = 1
-[gui]
-	recentrepo = C:/Git/frontend
-[safe]
-	directory = C:/Git/*
-	directory = C:/Git/frontend
+    autocorrect = 1
 [alias]
     mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
 [push]
-	default = current
+    default = current
 [pull]
-	rebase = true
+    rebase = true
+[rebase]
+    stat = true
 [gpg]
-	program = "C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe"
+    program = "C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe"
 [commit]
-	gpgsign = true
+    gpgsign = true
 [tag]
-	gpgsign = true
+    gpgsign = true
