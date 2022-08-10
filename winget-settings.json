@@ -12,9 +12,18 @@
     "experimentalCmd": true,
     "experimentalArg": true,
     "experimentalMSStore": true,
+    "zipInstall": true,
     "list": true,
     "upgrade": true,
     "uninstall": true,
     "export": true
+  },
+  "installBehavior": {
+    "preferences": {
+      "architectures": ["x64", "x86"]
+    }
+  },
+  "telemetry": {
+    "disable": true
   }
 }
