@@ -17,6 +17,8 @@
     "dependencies": true,
     "directMSI": true,
     "experimentalMSStore": true,
+    "uninstallPreviousArgument": true,
+    "pinning": true,
     "windowsFeature": true,
     "configuration": true,
     "zipInstall": true,
