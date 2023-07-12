@@ -6,12 +6,15 @@
     "autoUpdateIntervalInMinutes": 5
   },
   "visual": {
-    "progressBar": "rainbow" // accent (default), retro, rainbow
+    "progressBar": "rainbow", // accent (default), retro, rainbow,
+    "anonymizeDisplayedPaths": true
   },
   "experimentalFeatures": {
     "experimentalCmd": true,
     "experimentalArg": true,
+    "dependencies": true,
     "experimentalMSStore": true,
+    "configuration": true,
     "zipInstall": true,
     "list": true,
     "upgrade": true,
@@ -21,7 +24,8 @@
   "installBehavior": {
     "preferences": {
       "architectures": ["x64", "x86"]
-    }
+    },
+    "portablePackageUserRoot": "%LOCALAPPDATA%/Microsoft/WinGet/Packages/"
   },
   "telemetry": {
     "disable": true
