@@ -1,6 +1,7 @@
 {
   // For documentation on these settings, see: https://aka.ms/winget-settings
   // Gui tool - https://winstall.app/
+  // join insider program for experimental builds
   "$schema": "https://aka.ms/winget-settings.schema.json",
   "source": {
     "autoUpdateIntervalInMinutes": 5
@@ -13,7 +14,9 @@
     "experimentalCmd": true,
     "experimentalArg": true,
     "dependencies": true,
+    "directMSI": true,
     "experimentalMSStore": true,
+    "windowsFeature": true,
     "configuration": true,
     "zipInstall": true,
     "list": true,
@@ -24,8 +27,7 @@
   "installBehavior": {
     "preferences": {
       "architectures": ["x64", "x86"]
-    },
-    "portablePackageUserRoot": "%LOCALAPPDATA%/Microsoft/WinGet/Packages/"
+    }
   },
   "telemetry": {
     "disable": true
