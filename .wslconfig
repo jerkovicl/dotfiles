@@ -1,0 +1,7 @@
+[experimental]
+autoMemoryReclaim=gradual
+sparseVhd=false
+networkingMode=mirrored
+dnsTunneling=true
+firewall=true
+autoProxy=true
