@@ -3,6 +3,10 @@
   // Gui tool - https://winstall.app/
   // join insider program for experimental builds
   // Winget Powershell module - Install-Module -Name Microsoft.WinGet.Client
+  // winget install Git.Git
+  // winget install GnuPG.Gpg4win
+  // winget install gopass.gopass
+  // winget install JanDeDobbeleer.OhMyPosh
   "$schema": "https://aka.ms/winget-settings.schema.json",
   "source": {
     "autoUpdateIntervalInMinutes": 5
