@@ -3,14 +3,7 @@
   // Gui tool - https://winstall.app/
   // join insider program for experimental builds
   // Winget Powershell module - Install-Module -Name Microsoft.WinGet.Client
-  // winget install --id Microsoft.Powershell --source winget
-  // winget install Git.Git
-  // winget install GnuPG.Gpg4win
   // winget install gopass.gopass
-  // winget install JanDeDobbeleer.OhMyPosh
-  // winget install Greenshot
-  // winget install Schniz.fnm
-  // winget install Microsoft.PowerToys
   "$schema": "https://aka.ms/winget-settings.schema.json",
   "source": {
     "autoUpdateIntervalInMinutes": 5
