@@ -1,0 +1,250 @@
+# Install all - winget configure -f <C:/Users/<username>/configuration.dsc.yaml>
+# Upgrade all - winget upgrade --all --include-unknown --silent --accept-package-agreements --accept-source-agreements
+# winget docs - https://learn.microsoft.com/en-us/windows/package-manager/winget/
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  resources:
+    - resource: Microsoft.Windows.Developer/DeveloperMode
+      directives:
+        description: Enable Developer Mode
+        allowPrerelease: true
+      settings:
+        Ensure: Present
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Git
+        allowPrerelease: true
+      settings:
+        id: Git.Git
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: VSCode
+      directives:
+        description: Install Visual Studio Code
+        allowPrerelease: true
+      settings:
+        id: Microsoft.VisualStudioCode
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: npm
+      directives:
+        description: Install NodeJS version >=18.15.x and <19
+        allowPrerelease: true
+      settings:
+        id: OpenJS.NodeJS.LTS
+        version: "18.18.0"
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Python 3.11
+        allowPrerelease: true
+      settings:
+        id: Python.Python.3.11
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: vsPackage
+      directives:
+        description: Install Visual Studio 2022 (any edition is OK)
+        allowPrerelease: true
+      settings:
+        id: Microsoft.VisualStudio.2022.BuildTools
+        source: winget
+    - resource: Microsoft.VisualStudio.DSC/VSComponents
+      dependsOn:
+        - vsPackage
+      directives:
+        description: Install required VS workloads
+        allowPrerelease: true
+      settings:
+        productId: Microsoft.VisualStudio.Product.BuildTools
+        channelId: VisualStudio.17.Release
+        includeRecommended: true
+        components:
+          # additional components reference here: https://learn.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-community?view=vs-2022
+          - Microsoft.VisualStudio.Workload.VCTools
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: PowershellCore
+      directives:
+        description: Install Powershell Core
+        allowPrerelease: true
+      settings:
+        id: Microsoft.PowerShell
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Gpg
+      directives:
+        description: Install Gpg
+        allowPrerelease: true
+      settings:
+        id: GnuPG.Gpg4win
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: GnuPG
+      directives:
+        description: Install Gnu Privacy Guard
+        allowPrerelease: true
+      settings:
+        id: GnuPG.GnuPG
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: OhMyPosh
+      directives:
+        description: Install OhMyPosh
+        allowPrerelease: true
+      settings:
+        id: JanDeDobbeleer.OhMyPosh
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: fnm
+      directives:
+        description: Install fnm
+        allowPrerelease: true
+      settings:
+        id: Schniz.fnm
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Greenshot
+      directives:
+        description: Install Greenshot
+        allowPrerelease: true
+      settings:
+        id: Greenshot.Greenshot
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Powertoys
+      directives:
+        description: Install Powertoys
+        allowPrerelease: true
+      settings:
+        id: Microsoft.PowerToys
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: WindowsTerminal
+      directives:
+        description: Install Windows Terminal Preview
+        allowPrerelease: true
+      settings:
+        id: Microsoft.WindowsTerminal.Preview
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: 7Zip
+      directives:
+        description: Install 7Zip
+        allowPrerelease: true
+      settings:
+        id: 7zip.7zip
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: DockerDesktop
+      directives:
+        description: Install Docker Desktop
+        allowPrerelease: true
+      settings:
+        id: Docker.DockerDesktop
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: NotepadPlusPlus
+      directives:
+        description: Install Notepad++
+        allowPrerelease: true
+      settings:
+        id: Notepad++.Notepad++
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: GoogleChrome
+      directives:
+        description: Install Google Chrome
+        allowPrerelease: true
+      settings:
+        id: Google.Chrome.Dev
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: FirefoxDeveloperEdition
+      directives:
+        description: Install Firefox Developer Edition
+        allowPrerelease: true
+      settings:
+        id: Mozilla.Firefox.DeveloperEdition
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: DevHome
+      directives:
+        description: Install DevHome
+        allowPrerelease: true
+      settings:
+        id: Microsoft.DevHome
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: DevHomeGithubExtension
+      directives:
+        description: Install Github Extension for DevHome
+        allowPrerelease: true
+      settings:
+        id: Microsoft.Windows.DevHomeGitHubExtension
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Postman
+      directives:
+        description: Install Postman
+        allowPrerelease: true
+      settings:
+        id: Postman.Postman
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Ag
+      directives:
+        description: Install Silver Searcher
+        allowPrerelease: true
+      settings:
+        id: JFLarvoire.Ag
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: RemoteNG
+      directives:
+        description: Install mRemoteNG
+        allowPrerelease: true
+      settings:
+        id: mRemoteNG.mRemoteNG
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Files Preview
+      directives:
+        description: Install Files Preview
+        allowPrerelease: true
+      settings:
+        id: FilesPreview_wvne1zexy08sa
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: ImageGlass
+      directives:
+        description: Install ImageGlass
+        allowPrerelease: true
+      settings:
+        id: DuongDieuPhap.ImageGlass
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: AdobeAcrobatReader
+      directives:
+        description: Install Adobe Acrobat Reader
+        allowPrerelease: true
+      settings:
+        id: Adobe.Acrobat.Reader.32-bit
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Gsudo
+      directives:
+        description: Install gsudo
+        allowPrerelease: true
+      settings:
+        id: gerardog.gsudo
+        source: winget
+    - resource: NpmDsc/NpmInstall
+      dependsOn:
+        - npm
+      directives:
+        description: Run 'npm install'
+        allowPrerelease: true
+      settings:
+        Ensure: "Present"
+        PackageDirectory: '${WinGetConfigRoot}\..\' # this is the root of the project
+  configurationVersion: 0.2.0
