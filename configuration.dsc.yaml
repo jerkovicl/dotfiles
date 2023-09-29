@@ -26,6 +26,14 @@ properties:
         id: Microsoft.VisualStudioCode
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: VSCodeInsiders
+      directives:
+        description: Install Visual Studio Code Insiders
+        allowPrerelease: true
+      settings:
+        id: Microsoft.VisualStudioCode.Insiders
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: npm
       directives:
         description: Install NodeJS version >=18.15.x and <19
@@ -228,7 +236,7 @@ properties:
         description: Install Adobe Acrobat Reader
         allowPrerelease: true
       settings:
-        id: Adobe.Acrobat.Reader.32-bit
+        id: Adobe.Acrobat.Reader.64-bit
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: Gsudo
@@ -237,6 +245,30 @@ properties:
         allowPrerelease: true
       settings:
         id: gerardog.gsudo
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: BeekeeperStudio
+      directives:
+        description: Install Beekeeper Studio
+        allowPrerelease: true
+      settings:
+        id: beekeeper-studio.beekeeper-studio
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: AzureDataStudio
+      directives:
+        description: Install Azure Data Studio
+        allowPrerelease: true
+      settings:
+        id: Microsoft.AzureDataStudio.Insiders
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Carapace
+      directives:
+        description: Install Carapace Shell Completion
+        allowPrerelease: true
+      settings:
+        id: rsteube.Carapace
         source: winget
     - resource: NpmDsc/NpmInstall
       dependsOn:
