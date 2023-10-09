@@ -44,10 +44,10 @@ properties:
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install Python 3.11
+        description: Install Python 3.12
         allowPrerelease: true
       settings:
-        id: Python.Python.3.11
+        id: Python.Python.3.12
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: vsPackage
