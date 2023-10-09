@@ -1,9 +1,32 @@
 # Install all - winget configure -f <C:/Users/<username>/configuration.dsc.yaml>
 # Upgrade all - winget upgrade --all --include-unknown --silent --accept-package-agreements --accept-source-agreements
 # winget docs - https://learn.microsoft.com/en-us/windows/package-manager/winget/
+# winget packages manifests source - https://github.com/microsoft/winget-pkgs/tree/master/manifests
+# For WinGet you can search the GitHub repository for the manifest (yaml) file for the application you want to install and extract the PackageIdentifier. 
+# For applications in the Microsoft Store you can search for the application you want and extract the Id from the url
+
 # yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
 properties:
   resources:
+  configurationVersion: 0.2.0
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: WslStore
+      directives:
+        description: WSL
+        allowPrerelease: true
+      settings:
+        id: "9P9TQF7MRM4R"
+        source: msstore
+    # wsl install still needs to be run to set Ubuntu as active distribution
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      dependsOn:
+        - WslStore
+      directives:
+        description:  Ubuntu 22.04 LTS
+        allowPrerelease: true
+      settings:
+        id: Canonical.Ubuntu.2204
+        source: winget 
     - resource: Microsoft.Windows.Developer/DeveloperMode
       directives:
         description: Enable Developer Mode
@@ -55,6 +78,7 @@ properties:
         description: Install Visual Studio 2022 (any edition is OK)
         allowPrerelease: true
       settings:
+        # id: Microsoft.VisualStudio.2022.Community
         id: Microsoft.VisualStudio.2022.BuildTools
         source: winget
     - resource: Microsoft.VisualStudio.DSC/VSComponents
@@ -64,6 +88,10 @@ properties:
         description: Install required VS workloads
         allowPrerelease: true
       settings:
+        # productId: Microsoft.VisualStudio.Product.Community
+        # channelId: VisualStudio.17.Release
+        # .vsconfig in root and configuration.dsc.yaml in .configuration folder of root
+        # vsConfigFile: '${WinGetConfigRoot}\..\.vsconfig'
         productId: Microsoft.VisualStudio.Product.BuildTools
         channelId: VisualStudio.17.Release
         includeRecommended: true
