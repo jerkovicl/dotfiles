@@ -4,6 +4,10 @@
 # winget packages manifests source - https://github.com/microsoft/winget-pkgs/tree/master/manifests
 # For WinGet you can search the GitHub repository for the manifest (yaml) file for the application you want to install and extract the PackageIdentifier. 
 # For applications in the Microsoft Store you can search for the application you want and extract the Id from the url
+# Dev Drive - https://learn.microsoft.com/en-us/windows/dev-drive/
+# Trusted Dev Drive - https://learn.microsoft.com/en-us/windows/dev-drive/#how-do-i-designate-a-dev-drive-as-trusted
+# Setup Dev Drive Package Cache - https://learn.microsoft.com/en-us/windows/dev-drive/#storing-package-cache-on-dev-drive
+# Change the NPM Cache location - https://bobbyhadz.com/blog/npm-change-cache-location
 
 # yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
 properties:
