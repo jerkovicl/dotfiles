@@ -309,7 +309,15 @@ properties:
         allowPrerelease: true
       settings:
         id: GitHub.cli
-        source: winget	
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: micro
+      directives:
+        description: Install micro terminal text editor
+        allowPrerelease: true
+      settings:
+        id: zyedidia.micro
+        source: winget
     - resource: NpmDsc/NpmInstall
       dependsOn:
         - npm
