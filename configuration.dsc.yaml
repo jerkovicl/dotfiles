@@ -63,11 +63,11 @@ properties:
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: npm
       directives:
-        description: Install NodeJS version >=18.15.x and <19
+        description: Install NodeJS version >=18.15.x and <21
         allowPrerelease: true
       settings:
         id: OpenJS.NodeJS.LTS
-        version: "18.18.0"
+        version: "20.10.0"
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
@@ -302,6 +302,14 @@ properties:
       settings:
         id: rsteube.Carapace
         source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: GithubCli
+      directives:
+        description: Install Github CLI
+        allowPrerelease: true
+      settings:
+        id: GitHub.cli
+        source: winget	
     - resource: NpmDsc/NpmInstall
       dependsOn:
         - npm
