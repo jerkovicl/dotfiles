@@ -318,6 +318,14 @@ properties:
       settings:
         id: zyedidia.micro
         source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: ripgrep
+      directives:
+        description: Install ripgrep
+        allowPrerelease: true
+      settings:
+        id: BurntSushi.ripgrep.MSVC
+        source: winget
     - resource: NpmDsc/NpmInstall
       dependsOn:
         - npm
