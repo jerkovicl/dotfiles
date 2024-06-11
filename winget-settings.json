@@ -3,6 +3,9 @@
   // Gui tool - https://winstall.app/
   // join insider program for experimental builds
   // Winget Powershell module - Install-Module -Name Microsoft.WinGet.Client
+  // winget repair - repair the winget installation for page
+  // --allow-reboot flag - allow reboot after installation
+  // winget install docs - https://github.com/KK-Designs/winget-cli/blob/master/doc/windows/package-manager/winget/install.md
   "$schema": "https://aka.ms/winget-settings.schema.json",
   "source": {
     "autoUpdateIntervalInMinutes": 5
@@ -28,7 +31,12 @@
     "export": true,
     "resume": true,
     "configuration03": true,
-    "reboot": true
+    "reboot": true,
+    "sideBySide": true,
+    "configureSelfElevate": true,
+    "storeDownload": true,
+    "configureExport": true,
+    "indexV2": true
   },
   "installBehavior": {
     "preferences": {
