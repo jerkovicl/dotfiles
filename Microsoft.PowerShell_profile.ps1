@@ -3,6 +3,7 @@
 # Upgrade module trick  cd "C:\Program Files\PowerShell\7\" && pwsh.exe -noprofile -command "Install-Module PSReadLine -Force -SkipPublisherCheck -AllowPrerelease"
 # Upgrade any module: Update-Module -Name modulename -AllowPrerelease -Scope CurrentUser
 # Install-Module -Name CompletionPredictor
+# Install-Module PShell-AI
 # install ohmyposh: winget install JanDeDobbeleer.OhMyPosh
 # upgrade ohmyposh: winget upgrade JanDeDobbeleer.OhMyPosh
 
