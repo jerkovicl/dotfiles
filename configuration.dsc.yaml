@@ -104,6 +104,14 @@ properties:
           # additional components reference here: https://learn.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-community?view=vs-2022
           - Microsoft.VisualStudio.Workload.VCTools
     - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Edit
+      directives:
+        description: Install Microsoft Edit
+        allowPrerelease: true
+      settings:
+        id: Microsoft.Edit
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: PowershellCore
       directives:
         description: Install Powershell Core
