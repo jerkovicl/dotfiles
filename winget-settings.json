@@ -6,6 +6,7 @@
   // winget repair - repair the winget installation for page
   // --allow-reboot flag - allow reboot after installation
   // winget install docs - https://github.com/KK-Designs/winget-cli/blob/master/doc/windows/package-manager/winget/install.md
+  // enables experimental support for fonts via `winget settings`. The `winget font list` command will list installed font families and the number of installed font faces.
   "$schema": "https://aka.ms/winget-settings.schema.json",
   "source": {
     "autoUpdateIntervalInMinutes": 5
@@ -36,7 +37,9 @@
     "configureSelfElevate": true,
     "storeDownload": true,
     "configureExport": true,
-    "indexV2": true
+    "indexV2": true,
+    "dsc3": true,
+    "fonts": true
   },
   "installBehavior": {
     "preferences": {
