@@ -17,6 +17,14 @@
         "sdras.night-owl",
         "emmanuelbeziat.vscode-great-icons"
       ],
+      "mcp": {
+        "servers": {
+          "playwright": {
+            "command": "npx",
+            "args": ["@playwright/mcp@latest"]
+          }
+        }
+      },
       "settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
         "window.autoDetectColorScheme": true,
